@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+*.tsbuildinfo
+
+# Environment & local files
+.env
+.env.*
+.DS_Store
+*.log
+
+# Private / non-code documents
+Invoice_*.pdf

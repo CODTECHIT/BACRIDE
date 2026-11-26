@@ -1,0 +1,129 @@
+import React from 'react';
+import {
+  Broadcast,
+  Clock,
+  Headset,
+  House,
+  IdentificationCard,
+  Motorcycle,
+  SignOut,
+  Star,
+  Wallet,
+  X,
+} from '@phosphor-icons/react';
+import type { RiderRouteName } from '../navigation/types';
+import { BacrideSoloScooterMark } from './BacrideIcons';
+
+export const RiderDrawer: React.FC<{
+  open: boolean;
+  activeRoute: RiderRouteName;
+  walletBalance: number;
+  onClose: () => void;
+  onNavigate: (route: RiderRouteName) => void;
+}> = ({ open, activeRoute, walletBalance, onClose, onNavigate }) => {
+  if (!open) return null;
+
+  const navItems: { label: string; icon: React.ElementType; target: RiderRouteName }[] = [
+    { label: 'Partner Home', icon: House, target: 'Home' },
+    { label: 'Incoming Requests', icon: Broadcast, target: 'IncomingRequest' },
+    { label: 'Active Trip', icon: Motorcycle, target: 'OnTrip' },
+    { label: 'Earnings & Wallet', icon: Wallet, target: 'Earnings' },
+    { label: 'Registration & KYC', icon: IdentificationCard, target: 'Kyc' },
+    { label: 'Trip History', icon: Clock, target: 'History' },
+    { label: 'Support & SOS', icon: Headset, target: 'Support' },
+  ];
+
+  return (
+    <div className="absolute inset-0 z-40 bg-black/50 backdrop-blur-[1px] flex">
+      <div className="w-[82%] max-w-[320px] bg-white h-full flex flex-col justify-between shadow-2xl overflow-hidden">
+        <div>
+          <div className="bg-gradient-to-br from-[#FBBF24] via-[#FCD34D] to-[#FDE68A] px-4 pt-4 pb-4">
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center gap-2">
+                <BacrideSoloScooterMark className="w-7 h-5 text-[#111318]" />
+                <span className="font-display font-extrabold text-base text-[#111318]">Bacride Partner</span>
+              </div>
+              <button
+                type="button"
+                onClick={onClose}
+                className="w-8 h-8 rounded-full bg-white/70 hover:bg-white flex items-center justify-center text-gray-800 cursor-pointer"
+                aria-label="Close menu"
+              >
+                <X size={16} weight="bold" />
+              </button>
+            </div>
+
+            <div className="bg-[#161920] text-white rounded-2xl p-3 flex items-center justify-between gap-2 shadow-md">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <img
+                  src={`${import.meta.env.BASE_URL}assets/avatar-arif.png`}
+                  alt="Arif Partner"
+                  className="w-10 h-10 rounded-full object-cover border-2 border-[#FBBF24] shrink-0"
+                />
+                <div className="min-w-0">
+                  <div className="text-xs font-extrabold truncate">Arif (Partner)</div>
+                  <div className="text-[10px] text-gray-400 truncate">TS09-AB-5836</div>
+                  <div className="flex items-center gap-1 text-[10px] text-amber-400 font-bold mt-0.5">
+                    <Star size={10} weight="fill" />
+                    <span>4.9 • Verified</span>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  onClose();
+                  onNavigate('Earnings');
+                }}
+                className="px-2.5 py-1 rounded-full bg-[#FBBF24] text-[#111318] text-[10px] font-extrabold whitespace-nowrap shrink-0 cursor-pointer"
+              >
+                ₹{walletBalance.toLocaleString('en-IN')}
+              </button>
+            </div>
+          </div>
+
+          <div className="p-3 space-y-0.5 overflow-y-auto max-h-[calc(100dvh-230px)] thin-scroll">
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = activeRoute === item.target;
+              return (
+                <button
+                  key={item.label}
+                  type="button"
+                  onClick={() => {
+                    onClose();
+                    onNavigate(item.target);
+                  }}
+                  className={`w-full px-3 py-2.5 rounded-xl flex items-center gap-3 text-xs font-bold transition cursor-pointer ${isActive
+                    ? 'bg-[#FFF8DC] text-amber-700 border border-amber-200'
+                    : 'text-gray-700 hover:bg-gray-50'
+                    }`}
+                >
+                  <Icon size={18} weight={isActive ? 'fill' : 'duotone'} className={isActive ? 'text-amber-600' : 'text-gray-500'} />
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="p-3 border-t border-gray-100">
+          <button
+            type="button"
+            onClick={() => {
+              onClose();
+              onNavigate('Splash');
+            }}
+            className="w-full px-3 py-2.5 rounded-xl bg-red-50 hover:bg-red-100 text-red-600 flex items-center justify-center gap-2 text-xs font-bold cursor-pointer"
+          >
+            <SignOut size={16} weight="bold" />
+            <span>Log Out</span>
+          </button>
+        </div>
+      </div>
+
+      <div className="flex-1" onClick={onClose} />
+    </div>
+  );
+};
+

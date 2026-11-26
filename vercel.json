@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/CUSTOMER", "destination": "/customer", "permanent": false },
+    { "source": "/CUSTOMER/:path*", "destination": "/customer/:path*", "permanent": false },
+    { "source": "/RIDER", "destination": "/rider", "permanent": false },
+    { "source": "/RIDER/:path*", "destination": "/rider/:path*", "permanent": false },
+    { "source": "/ADMIN", "destination": "/admin", "permanent": false },
+    { "source": "/ADMIN/:path*", "destination": "/admin/:path*", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/customer", "destination": "/customer/index.html" },
+    { "source": "/customer/((?!assets/).*)", "destination": "/customer/index.html" },
+    { "source": "/rider", "destination": "/rider/index.html" },
+    { "source": "/rider/((?!assets/).*)", "destination": "/rider/index.html" },
+    { "source": "/admin", "destination": "/admin/index.html" },
+    { "source": "/admin/((?!assets/).*)", "destination": "/admin/index.html" },
+    { "source": "/((?!customer|rider|admin|assets/).*)", "destination": "/index.html" }
+  ]
+}
