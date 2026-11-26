@@ -166,7 +166,7 @@ export const ParcelScreen: React.FC<{
         <button
           type="button"
           onClick={() => onNavigate('Tracking')}
-          className="w-full py-3 rounded-full bg-[#FBBF24] hover:bg-amber-400 text-[#111318] font-bold text-sm shadow-sm flex items-center justify-center gap-1.5 cursor-pointer shrink-0"
+          className="w-full py-3.5 rounded-full btn-glass-primary font-bold text-sm flex items-center justify-center gap-1.5 cursor-pointer shrink-0"
         >
           <span>Book Parcel</span>
           <ArrowRight size={15} weight="bold" />

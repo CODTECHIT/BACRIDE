@@ -3,12 +3,12 @@
  */
 export const BacrideTheme = {
   colors: {
-    primary: '#FBBF24',
-    primaryDeep: '#F59E0B',
-    primarySoft: '#FFFBEB',
-    headerTop: '#FCD34D',
-    headerMid: '#FDE68A',
-    headerBottom: '#FEF9C3',
+    primary: '#ffae2e',
+    primaryDeep: '#e89a1f',
+    primarySoft: '#fff8eb',
+    headerTop: '#ffae2e',
+    headerMid: '#ffbe4d',
+    headerBottom: '#fff9f0',
     darkSurface: '#14171D',
     darkCard: '#161920',
     background: '#F9FAFB',

@@ -48,7 +48,7 @@ export const LoginScreen: React.FC<{ onNavigate: (route: CustomerRouteName) => v
             <button
               type="button"
               onClick={() => setStep('otp')}
-              className="w-full py-3.5 rounded-full bg-[#FBBF24] hover:bg-amber-400 text-[#111318] font-bold text-sm shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full py-3.5 rounded-full btn-glass-primary font-bold text-sm flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>Send OTP</span>
               <ArrowRight size={16} weight="bold" />
@@ -92,7 +92,7 @@ export const LoginScreen: React.FC<{ onNavigate: (route: CustomerRouteName) => v
             <button
               type="button"
               onClick={() => onNavigate('Home')}
-              className="w-full py-3.5 rounded-full bg-[#FBBF24] hover:bg-amber-400 text-[#111318] font-bold text-sm shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full py-3.5 rounded-full btn-glass-primary font-bold text-sm flex items-center justify-center gap-2 cursor-pointer"
             >
               <ShieldCheck size={17} weight="bold" />
               <span>Verify &amp; Continue</span>

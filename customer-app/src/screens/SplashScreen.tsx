@@ -42,7 +42,7 @@ export const SplashScreen: React.FC<{ onNavigate: (route: CustomerRouteName) => 
       <button
         type="button"
         onClick={() => onNavigate('Login')}
-        className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#FCD34D] via-[#FBBF24] to-[#F59E0B] text-[#111318] font-bold text-sm shadow-[0_8px_28px_rgba(251,191,36,0.4)] flex items-center justify-center gap-2 hover:brightness-105 cursor-pointer"
+        className="w-full py-3.5 rounded-full btn-glass-primary font-bold text-sm flex items-center justify-center gap-2 cursor-pointer"
       >
         <span>Get Started</span>
         <ArrowRight size={17} weight="bold" />

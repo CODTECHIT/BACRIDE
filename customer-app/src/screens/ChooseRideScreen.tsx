@@ -177,7 +177,7 @@ export const ChooseRideScreen: React.FC<{
         <button
           type="button"
           onClick={() => onNavigate('Tracking')}
-          className="px-7 py-3 rounded-full bg-[#FBBF24] hover:bg-amber-400 text-[#111318] font-bold text-sm shadow-sm flex items-center gap-1.5 cursor-pointer"
+          className="px-7 py-3 rounded-full btn-glass-primary font-bold text-sm flex items-center gap-1.5 cursor-pointer"
         >
           <span>Book Now</span>
           <ArrowRight size={15} weight="bold" />

@@ -20,26 +20,26 @@ export const HomeScreen: React.FC<{
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB] relative">
       {/* Top Yellow Nav Bar fading into Curved Soft Cream Greeting Band (exact match to costumerUI.jpeg Screen 2) */}
-      <div className="bg-gradient-to-b from-[#FCD34D] via-[#FDE68A] to-[#FFFDF5] px-4 pt-3 pb-3 shrink-0">
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#fff9f0] px-4 pt-4 pb-4 shrink-0 shadow-xs">
         <div className="flex items-center justify-between">
-          <button type="button" onClick={onOpenMenu} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-800 cursor-pointer" aria-label="Menu">
-            <List size={21} weight="bold" />
+          <button type="button" onClick={onOpenMenu} className="p-2 rounded-xl hover:bg-black/10 text-gray-900 cursor-pointer transition-colors" aria-label="Menu">
+            <List size={25} weight="bold" />
           </button>
-          <div className="flex items-center gap-1.5">
-            <BacrideDualScooterMark className="w-7 h-5 text-[#111318]" />
-            <span className="font-display font-extrabold text-base text-[#111318]">Bacride</span>
+          <div className="flex items-center gap-2.5">
+            <BacrideDualScooterMark className="w-11 h-8 text-[#111318]" />
+            <span className="font-display font-black text-xl tracking-tight text-[#111318]">Bacride</span>
           </div>
-          <button type="button" onClick={() => onNavigate('Notifications')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-800 relative cursor-pointer" aria-label="Notifications">
-            <Bell size={19} weight="bold" />
-            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-red-500" />
+          <button type="button" onClick={() => onNavigate('Notifications')} className="p-2 rounded-xl hover:bg-black/10 text-gray-900 relative cursor-pointer transition-colors" aria-label="Notifications">
+            <Bell size={23} weight="bold" />
+            <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-red-500 ring-2 ring-[#ffae2e]" />
           </button>
         </div>
-        <div className="mt-2.5 bg-white/75 backdrop-blur-xs rounded-2xl px-3 py-2 -mx-1">
+        <div className="mt-3 bg-white/85 backdrop-blur-xs rounded-2xl px-4 py-2.5 -mx-0.5 shadow-xs border border-white/60">
           <h2 className="font-bold text-lg text-gray-900 flex items-center gap-1.5 leading-tight">
             <span>Hi, Arif</span>
-            <HandWaving size={18} weight="duotone" className="text-amber-600" />
+            <HandWaving size={19} weight="duotone" className="text-amber-700" />
           </h2>
-          <p className="text-xs text-gray-600">Where to go today?</p>
+          <p className="text-xs text-gray-600 mt-0.5">Where to go today?</p>
         </div>
       </div>
 
@@ -65,8 +65,8 @@ export const HomeScreen: React.FC<{
                   onClick={() => setSelectedCategory(cat.id)}
                   className={`rounded-xl p-2.5 border text-center transition shadow-sm cursor-pointer ${
                     active
-                      ? 'bg-gradient-to-b from-[#FDE047] to-[#FBBF24] border-[#F59E0B] text-[#111318]'
-                      : 'bg-white border-gray-200 hover:border-amber-300'
+                      ? 'bg-gradient-to-b from-[#ffd37a] to-[#ffae2e] border-[#e89a1f] text-[#111318]'
+                      : 'bg-white border-gray-200 hover:border-[#ffae2e]/50'
                   }`}
                 >
                   <div className="flex justify-center mb-1">
@@ -137,7 +137,7 @@ export const HomeScreen: React.FC<{
         <button
           type="button"
           onClick={() => onNavigate('ChooseRide')}
-          className="w-full mt-3 py-3 rounded-full bg-[#FBBF24] hover:bg-amber-400 text-[#111318] font-bold text-sm shadow-sm flex items-center justify-center gap-1.5 cursor-pointer shrink-0"
+          className="w-full mt-3 py-3.5 rounded-full btn-glass-primary font-bold text-sm flex items-center justify-center gap-1.5 cursor-pointer shrink-0"
         >
           <span>Book Now</span>
           <ArrowRight size={15} weight="bold" />
