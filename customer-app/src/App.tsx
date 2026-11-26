@@ -35,10 +35,9 @@ export function App() {
   const navigate = (next: CustomerRouteName) => {
     setRoute(next);
     if (next === 'Home' || next === 'Notifications') setActiveNavTab('Home');
-    else if (next === 'Parcel') setActiveNavTab('Parcel');
     else if (next === 'ChooseRide' || next === 'Tracking') setActiveNavTab('Ride');
-    else if (next === 'Wallet') setActiveNavTab('Wallet');
-    else if (next === 'Account' || next === 'History' || next === 'SavedPlaces' || next === 'Support') {
+    else if (next === 'Parcel') setActiveNavTab('Parcel');
+    else if (next === 'Account' || next === 'History' || next === 'SavedPlaces' || next === 'Support' || next === 'Wallet') {
       setActiveNavTab('Account');
     }
   };

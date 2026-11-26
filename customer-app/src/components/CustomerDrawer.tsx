@@ -29,7 +29,6 @@ export const CustomerDrawer: React.FC<{
     { label: 'Home', icon: House, target: 'Home' },
     { label: 'Choose a Ride', icon: Motorcycle, target: 'ChooseRide' },
     { label: 'Parcel Delivery', icon: Package, target: 'Parcel' },
-    { label: 'Bacride Wallet', icon: Wallet, target: 'Wallet' },
     { label: 'Ride & Parcel History', icon: Clock, target: 'History' },
     { label: 'Saved Places', icon: MapPin, target: 'SavedPlaces' },
     { label: 'Notifications', icon: Bell, target: 'Notifications' },
