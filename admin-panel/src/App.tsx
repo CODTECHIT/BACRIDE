@@ -15,6 +15,7 @@ import {
   Gear,
   Gift,
   Headset,
+  List,
   MagnifyingGlass,
   MapPin,
   Megaphone,
@@ -29,6 +30,7 @@ import {
   Users,
   Wallet,
   Warning,
+  X,
 } from '@phosphor-icons/react';
 import { AdminCityMap } from './components/AdminCityMap';
 import { BacrideBadgeLogo, CharminarSkyline, RealisticVehicleIcon } from './components/BacrideIcons';
@@ -97,6 +99,7 @@ const SIDEBAR_ITEMS: {
 ];
 
 export function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [section, setSection] = useState<AdminSectionId>('dashboard');
   const [city, setCity] = useState('Hyderabad');
   const [dateRange, setDateRange] = useState<'Today' | 'This Week' | 'This Month' | 'Custom'>('Today');
@@ -164,15 +167,39 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen flex bg-[#F4F5F8] text-[#111827]">
-      <aside className="w-[238px] shrink-0 bg-[#111318] text-gray-300 flex flex-col justify-between select-none">
+    <div className="min-h-screen flex bg-[#F4F5F8] text-[#111827] relative">
+      {/* Mobile Drawer Backdrop */}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 z-40 backdrop-blur-xs lg:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Sidebar: Slide-out drawer on mobile (<lg), persistent on desktop (lg+) */}
+      <aside
+        className={`fixed inset-y-0 left-0 z-50 w-[260px] bg-[#111318] text-gray-300 flex flex-col justify-between select-none transform transition-transform duration-200 ease-in-out lg:static lg:translate-x-0 lg:w-[238px] lg:shrink-0 ${
+          mobileMenuOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'
+        }`}
+      >
         <div>
-          <div className="px-4 py-4 flex items-center gap-2.5 border-b border-white/10">
-            <BacrideBadgeLogo className="w-9 h-9" />
-            <div className="leading-tight">
-              <div className="font-display font-extrabold text-white text-base tracking-tight">Bacride</div>
-              <div className="text-[11px] font-medium text-gray-400">Admin</div>
+          <div className="px-4 py-4 flex items-center justify-between border-b border-white/10">
+            <div className="flex items-center gap-2.5">
+              <BacrideBadgeLogo className="w-9 h-9" />
+              <div className="leading-tight">
+                <div className="font-display font-extrabold text-white text-base tracking-tight">Bacride</div>
+                <div className="text-[11px] font-medium text-gray-400">Admin</div>
+              </div>
             </div>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="lg:hidden p-1.5 text-gray-400 hover:text-white rounded-lg hover:bg-white/10 cursor-pointer"
+              aria-label="Close menu"
+            >
+              <X size={18} weight="bold" />
+            </button>
           </div>
 
           <nav className="p-2.5 space-y-0.5 max-h-[calc(100vh-190px)] overflow-y-auto thin-scroll" aria-label="Admin sidebar navigation">
@@ -183,7 +210,10 @@ export function App() {
                 <button
                   key={item.id}
                   type="button"
-                  onClick={() => setSection(item.id)}
+                  onClick={() => {
+                    setSection(item.id);
+                    setMobileMenuOpen(false);
+                  }}
                   className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs transition cursor-pointer ${
                     active ? 'bg-[#F5A623] text-[#111318] font-bold shadow-xs' : 'text-gray-300 hover:bg-white/5 hover:text-white font-medium'
                   }`}
@@ -216,23 +246,35 @@ export function App() {
       </aside>
 
       <div className="flex-1 flex flex-col min-w-0">
-        <header className="bg-white border-b border-gray-200 px-6 py-2.5 flex flex-wrap items-center justify-between gap-3 sticky top-0 z-20">
-          <div className="relative flex-1 max-w-md min-w-[220px]">
+        <header className="bg-white border-b border-gray-200 px-3 sm:px-6 py-2.5 flex items-center justify-between gap-2 sm:gap-3 sticky top-0 z-20">
+          <div className="flex items-center gap-2 lg:hidden">
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(true)}
+              className="p-1.5 rounded-lg text-gray-700 hover:bg-gray-100 cursor-pointer"
+              aria-label="Open sidebar menu"
+            >
+              <List size={22} weight="bold" />
+            </button>
+            <BacrideBadgeLogo className="w-7 h-7" />
+          </div>
+
+          <div className="relative flex-1 max-w-md min-w-[120px] sm:min-w-[220px]">
             <MagnifyingGlass size={15} className="text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="search"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search users, partners, rides, parcels, tickets..."
-              className="w-full pl-9 pr-12 py-1.5 text-xs bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:bg-white focus:border-amber-400"
+              placeholder="Search..."
+              className="w-full pl-9 pr-8 sm:pr-12 py-1.5 text-xs bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:bg-white focus:border-amber-400"
             />
-            <kbd className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-gray-400 bg-white border border-gray-200 px-1.5 py-0.5 rounded">
+            <kbd className="hidden sm:inline-block absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-gray-400 bg-white border border-gray-200 px-1.5 py-0.5 rounded">
               ⌘K
             </kbd>
           </div>
 
-          <div className="flex items-center gap-3">
-            <label className="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-gray-800 cursor-pointer">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <label className="hidden sm:flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-gray-800 cursor-pointer">
               <MapPin size={14} weight="duotone" className="text-amber-600" />
               <select
                 value={city}
@@ -250,58 +292,58 @@ export function App() {
             <button
               type="button"
               onClick={() => setSection('notifications')}
-              className="relative p-2 rounded-lg hover:bg-gray-100 text-gray-600 cursor-pointer"
+              className="relative p-1.5 sm:p-2 rounded-lg hover:bg-gray-100 text-gray-600 cursor-pointer"
               aria-label="Notifications"
             >
               <Bell size={17} weight="duotone" />
-              <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-red-500" />
+              <span className="absolute top-1 sm:top-1.5 right-1 sm:right-1.5 w-2 h-2 rounded-full bg-red-500" />
             </button>
 
             <button
               type="button"
               onClick={() => setSection('sos')}
-              className="flex items-center gap-1.5 bg-[#FBBF24] hover:bg-amber-400 text-[#111318] px-3 py-1.5 rounded-lg text-xs font-bold shadow-2xs cursor-pointer"
+              className="flex items-center gap-1 sm:gap-1.5 bg-[#FBBF24] hover:bg-amber-400 text-[#111318] px-2 sm:px-3 py-1.5 rounded-lg text-xs font-bold shadow-2xs cursor-pointer"
             >
               <Siren size={14} weight="fill" />
-              <span>SOS Alerts</span>
+              <span className="hidden sm:inline">SOS Alerts</span>
               <span className="w-4 h-4 rounded-full bg-red-600 text-white text-[10px] flex items-center justify-center">3</span>
             </button>
 
-            <div className="flex items-center gap-2 pl-2 border-l border-gray-200">
-              <div className="w-8 h-8 rounded-full bg-gray-900 text-amber-400 font-bold text-xs flex items-center justify-center">
+            <div className="flex items-center gap-1.5 sm:gap-2 pl-1.5 sm:pl-2 border-l border-gray-200">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gray-900 text-amber-400 font-bold text-xs flex items-center justify-center">
                 BA
               </div>
-              <div className="hidden sm:block leading-tight">
+              <div className="hidden md:block leading-tight">
                 <div className="text-xs font-bold text-gray-900">Admin</div>
                 <div className="text-[10px] text-gray-500">Super Admin</div>
               </div>
-              <CaretDown size={13} className="text-gray-400" />
+              <CaretDown size={13} className="text-gray-400 hidden sm:block" />
             </div>
           </div>
         </header>
 
-        <main className="flex-1 p-5 space-y-4 max-w-[1460px] w-full mx-auto">
+        <main className="flex-1 p-3 sm:p-5 space-y-4 max-w-[1460px] w-full mx-auto overflow-x-hidden">
           {section === 'dashboard' && (
             <>
-              <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div>
-                  <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">Dashboard</h1>
+                  <h1 className="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">Dashboard</h1>
                   <p className="text-xs text-gray-500">Bacride Ride Booking &amp; Parcel Delivery Platform</p>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-2.5">
-                  <div className="bg-white border border-gray-200 rounded-lg px-3 py-1.5 text-xs font-semibold text-gray-700 flex items-center gap-1.5 shadow-2xs">
+                <div className="flex items-center gap-2 overflow-x-auto thin-scroll max-w-full pb-1 sm:pb-0">
+                  <div className="bg-white border border-gray-200 rounded-lg px-2.5 sm:px-3 py-1.5 text-xs font-semibold text-gray-700 flex items-center gap-1.5 shadow-2xs shrink-0">
                     <CalendarBlank size={14} weight="duotone" className="text-amber-600" />
                     <span>Today, 25 Nov 2026</span>
                     <CaretDown size={12} className="text-gray-400" />
                   </div>
-                  <div className="bg-white border border-gray-200 rounded-lg p-0.5 inline-flex shadow-2xs">
+                  <div className="bg-white border border-gray-200 rounded-lg p-0.5 inline-flex shadow-2xs shrink-0">
                     {(['Today', 'This Week', 'This Month', 'Custom'] as const).map((r) => (
                       <button
                         key={r}
                         type="button"
                         onClick={() => setDateRange(r)}
-                        className={`px-3 py-1 rounded-md text-xs font-semibold transition cursor-pointer ${
+                        className={`px-2.5 sm:px-3 py-1 rounded-md text-xs font-semibold transition cursor-pointer shrink-0 ${
                           dateRange === r ? 'bg-[#F5A623] text-[#111318] font-bold' : 'text-gray-600 hover:text-gray-900'
                         }`}
                       >
@@ -312,7 +354,7 @@ export function App() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3">
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2.5 sm:gap-3">
                 {ADMIN_KPIS.map((kpi, idx) => {
                   const icons = [Users, UserCheck, Clock, CarProfile, Wallet, Warning];
                   const KpiIcon = icons[idx];

@@ -25,7 +25,15 @@ dialog::backdrop {
   background: rgb(17 19 24 / 0.55);
   backdrop-filter: blur(2px);
 }
-.table-wrapper { overflow: auto; max-inline-size: 100%; container-type: inline-size; }
+.table-wrapper {
+  overflow-x: auto;
+  max-inline-size: 100%;
+  container-type: inline-size;
+  -webkit-overflow-scrolling: touch;
+}
+.table-wrapper table {
+  min-width: 580px;
+}
 input[type="checkbox"][switch] { accent-color: #16a34a; cursor: pointer; }
 input[type="checkbox"][switch]:focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
 .thin-scroll::-webkit-scrollbar { width: 5px; height: 5px; }
