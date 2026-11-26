@@ -14,9 +14,9 @@ export const RiderBottomNav: React.FC<{
   ];
 
   return (
-    <div className="shrink-0 px-3.5 pb-3 pt-1 bg-gradient-to-t from-[#F9FAFB] via-[#F9FAFB]/90 to-transparent relative z-20">
+    <div className="shrink-0 px-4 pb-3.5 pt-1 bg-gradient-to-t from-[#F9FAFB] via-[#F9FAFB]/90 to-transparent relative z-20">
       <nav
-        className="bg-white/95 backdrop-blur-xl border border-white/80 rounded-2xl p-1.5 flex items-center justify-between shadow-[0_10px_28px_-6px_rgba(0,0,0,0.1),0_4px_12px_rgba(0,0,0,0.04),inset_0_1px_1px_rgba(255,255,255,0.95)]"
+        className="bg-white/80 backdrop-blur-2xl border border-white/85 rounded-full p-1.5 flex items-center justify-between shadow-[0_14px_36px_-6px_rgba(0,0,0,0.14),0_4px_12px_rgba(0,0,0,0.05),inset_0_1.5px_1.5px_rgba(255,255,255,0.95)]"
         aria-label="Partner Bottom Navigation"
       >
         {tabs.map((tab) => {
@@ -27,18 +27,18 @@ export const RiderBottomNav: React.FC<{
               key={tab.id}
               type="button"
               onClick={() => onNavigate(tab.target)}
-              className={`flex-1 flex flex-col items-center justify-center gap-1 py-1.5 px-1 rounded-xl transition-all duration-200 cursor-pointer select-none focus:outline-none ${
+              className={`flex-1 flex flex-col items-center justify-center gap-0.5 py-2 px-2 rounded-full transition-all duration-200 cursor-pointer select-none focus:outline-none ${
                 isActive
-                  ? 'bg-gradient-to-b from-[#FFFBEB] to-[#FEF3C7] text-amber-700 shadow-xs border border-amber-300/60 font-bold scale-[1.02]'
-                  : 'text-gray-400 hover:text-gray-700 hover:bg-black/[0.02] font-medium'
+                  ? 'bg-gradient-to-r from-[#FFC554] via-[#FFAE2E] to-[#F59E0B] text-[#111318] shadow-[0_4px_14px_rgba(255,174,46,0.45),inset_0_1.5px_1px_rgba(255,255,255,0.7),inset_0_-1px_1px_rgba(0,0,0,0.1)] border border-white/60 scale-[1.03]'
+                  : 'text-gray-400 hover:text-gray-700 hover:bg-black/[0.03]'
               }`}
             >
               <Icon
-                size={22}
+                size={21}
                 weight={isActive ? 'fill' : 'duotone'}
-                className={`transition-transform duration-200 ${isActive ? 'text-amber-600 scale-105' : 'text-gray-400'}`}
+                className={`transition-transform duration-200 ${isActive ? 'text-[#111318] scale-105' : 'text-gray-400'}`}
               />
-              <span className={`text-[11px] leading-tight ${isActive ? 'font-extrabold text-amber-700' : 'text-gray-500'}`}>
+              <span className={`text-[11px] leading-tight ${isActive ? 'font-black text-[#111318]' : 'font-semibold text-gray-500'}`}>
                 {tab.label}
               </span>
             </button>
