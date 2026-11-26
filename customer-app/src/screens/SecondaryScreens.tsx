@@ -9,11 +9,12 @@ export const HistoryScreen: React.FC<{ onNavigate: (route: CustomerRouteName) =>
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
-        <button type="button" onClick={() => onNavigate('Account')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={20} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffb338] px-5 pt-7 pb-8 rounded-b-[32px] flex items-center justify-between shrink-0 shadow-md relative z-10">
+        <button type="button" onClick={() => onNavigate('Account')} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Back">
+          <ArrowLeft size={24} weight="bold" />
         </button>
-        <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Order History</h2>
+        <h2 className="font-black text-2xl text-gray-900 tracking-tight text-center flex-1">Order History</h2>
+        <span className="w-11" />
       </div>
       <div className="p-3 bg-white border-b border-gray-200 grid grid-cols-2 gap-2 shrink-0">
         {(['Rides', 'Parcels'] as const).map((t) => (
@@ -68,11 +69,12 @@ export const SavedPlacesScreen: React.FC<{ onNavigate: (route: CustomerRouteName
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
-        <button type="button" onClick={() => onNavigate('Account')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={20} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffb338] px-5 pt-7 pb-8 rounded-b-[32px] flex items-center justify-between shrink-0 shadow-md relative z-10">
+        <button type="button" onClick={() => onNavigate('Account')} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Back">
+          <ArrowLeft size={24} weight="bold" />
         </button>
-        <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Saved Places</h2>
+        <h2 className="font-black text-2xl text-gray-900 tracking-tight text-center flex-1">Saved Places</h2>
+        <span className="w-11" />
       </div>
       <div className="flex-1 min-h-0 p-4 space-y-2.5 overflow-y-auto thin-scroll">
         {places.map((p) => (
@@ -115,11 +117,12 @@ export const SupportScreen: React.FC<{ onNavigate: (route: CustomerRouteName) =>
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
-        <button type="button" onClick={() => onNavigate('Account')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={20} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffb338] px-5 pt-7 pb-8 rounded-b-[32px] flex items-center justify-between shrink-0 shadow-md relative z-10">
+        <button type="button" onClick={() => onNavigate('Account')} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Back">
+          <ArrowLeft size={24} weight="bold" />
         </button>
-        <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Help &amp; Support</h2>
+        <h2 className="font-black text-2xl text-gray-900 tracking-tight text-center flex-1">Help &amp; Support</h2>
+        <span className="w-11" />
       </div>
       <div className="flex-1 min-h-0 p-4 space-y-3 overflow-y-auto thin-scroll">
         <div className="bg-white rounded-xl border border-gray-200 p-3.5 space-y-2">
@@ -139,11 +142,12 @@ export const SupportScreen: React.FC<{ onNavigate: (route: CustomerRouteName) =>
 
 export const NotificationsScreen: React.FC<{ onNavigate: (route: CustomerRouteName) => void }> = ({ onNavigate }) => (
   <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-    <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
-      <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
-        <ArrowLeft size={20} weight="bold" />
+    <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffb338] px-5 pt-7 pb-8 rounded-b-[32px] flex items-center justify-between shrink-0 shadow-md relative z-10">
+      <button type="button" onClick={() => onNavigate('Home')} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Back">
+        <ArrowLeft size={24} weight="bold" />
       </button>
-      <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Notifications</h2>
+      <h2 className="font-black text-2xl text-gray-900 tracking-tight text-center flex-1">Notifications</h2>
+      <span className="w-11" />
     </div>
     <div className="flex-1 min-h-0 p-4 space-y-2.5 overflow-y-auto thin-scroll">
       {CUSTOMER_NOTIFICATIONS.map((n) => (

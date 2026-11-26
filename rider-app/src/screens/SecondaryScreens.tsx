@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Headset, Siren } from '@phosphor-icons/react';
-import { RealisticBikeIcon } from '../components/BacrideIcons';
+import { BacrideSoloScooterMark, RealisticBikeIcon } from '../components/BacrideIcons';
 import type { RiderRouteName } from '../navigation/types';
 
 export const RiderHistoryScreen: React.FC<{ onNavigate: (route: RiderRouteName) => void }> = ({ onNavigate }) => (
   <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-    <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
-      <button type="button" onClick={() => onNavigate('Earnings')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
-        <ArrowLeft size={20} weight="bold" />
+    <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffb338] px-5 pt-7 pb-8 rounded-b-[32px] flex items-center justify-between shrink-0 shadow-md relative z-10">
+      <button type="button" onClick={() => onNavigate('Earnings')} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Back">
+        <ArrowLeft size={24} weight="bold" />
       </button>
-      <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Trip History</h2>
+      <div className="flex items-center gap-2.5">
+        <BacrideSoloScooterMark className="w-13 h-8.5 text-[#111318]" />
+        <h2 className="font-black text-xl sm:text-2xl text-gray-900 tracking-tight">Trip History</h2>
+      </div>
+      <span className="w-11" />
     </div>
     <div className="flex-1 min-h-0 p-4 space-y-2.5 overflow-y-auto thin-scroll">
       {[
@@ -40,11 +44,15 @@ export const RiderSupportScreen: React.FC<{ onNavigate: (route: RiderRouteName) 
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
-        <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={20} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffb338] px-5 pt-7 pb-8 rounded-b-[32px] flex items-center justify-between shrink-0 shadow-md relative z-10">
+        <button type="button" onClick={() => onNavigate('Home')} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Back">
+          <ArrowLeft size={24} weight="bold" />
         </button>
-        <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Partner Support &amp; SOS</h2>
+        <div className="flex items-center gap-2.5">
+          <BacrideSoloScooterMark className="w-13 h-8.5 text-[#111318]" />
+          <h2 className="font-black text-xl sm:text-2xl text-gray-900 tracking-tight">Partner Support &amp; SOS</h2>
+        </div>
+        <span className="w-11" />
       </div>
       <div className="flex-1 min-h-0 p-4 space-y-3 overflow-y-auto thin-scroll">
         <div className="bg-red-50 border border-red-200 rounded-xl p-3.5 flex items-center justify-between">

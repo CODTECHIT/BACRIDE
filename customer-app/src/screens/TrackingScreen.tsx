@@ -15,15 +15,15 @@ export const TrackingScreen: React.FC<{ onNavigate: (route: CustomerRouteName) =
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB] relative">
-      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center justify-between shrink-0">
-        <button type="button" onClick={() => onNavigate('ChooseRide')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={20} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffb338] px-5 pt-7 pb-8 rounded-b-[32px] flex items-center justify-between shrink-0 shadow-md relative z-10">
+        <button type="button" onClick={() => onNavigate('ChooseRide')} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Back">
+          <ArrowLeft size={24} weight="bold" />
         </button>
-        <div className="flex items-center gap-2">
-          <BacrideDualScooterMark className="w-9 h-6.5 text-[#111318]" />
-          <span className="font-display font-extrabold text-lg text-gray-900">Your Ride</span>
+        <div className="flex flex-col items-center justify-center select-none">
+          <BacrideDualScooterMark className="w-14 h-9 text-[#111318]" />
+          <span className="font-display font-black text-base tracking-tight text-gray-900 leading-none mt-1">Your Ride</span>
         </div>
-        <span className="w-6" />
+        <span className="w-11" />
       </div>
 
       <div className="h-56 w-full shrink-0">

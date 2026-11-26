@@ -15,21 +15,21 @@ export const ParcelScreen: React.FC<{
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#fff8eb] px-4 pt-4 pb-4 shrink-0">
-        <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={20} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffa826] px-5 pt-6 pb-8 rounded-b-[32px] shrink-0 shadow-md relative z-10">
+        <button type="button" onClick={() => onNavigate('Home')} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Back">
+          <ArrowLeft size={24} weight="bold" />
         </button>
-        <div className="flex items-center justify-between mt-2">
+        <div className="flex items-center justify-between mt-3.5">
           <div className="max-w-[64%]">
-            <div className="flex items-center gap-2">
-              <Package size={22} weight="duotone" className="text-amber-900" />
-              <h2 className="font-black text-lg text-gray-900 tracking-tight">Parcel Delivery</h2>
+            <div className="flex items-center gap-2.5">
+              <Package size={28} weight="duotone" className="text-amber-900" />
+              <h2 className="font-black text-2xl text-gray-900 tracking-tight">Parcel Delivery</h2>
             </div>
-            <p className="text-xs text-gray-700 mt-1 leading-snug">
+            <p className="text-xs text-gray-800 mt-1.5 leading-snug font-medium">
               Send &amp; deliver your parcels safely and quickly with Bacride.
             </p>
           </div>
-          <ParcelBoxesIllustration className="w-28 h-22 shrink-0 -mr-1" />
+          <ParcelBoxesIllustration className="w-32 h-24 shrink-0 -mr-1 drop-shadow-xs" />
         </div>
       </div>
 
@@ -142,9 +142,8 @@ export const ParcelScreen: React.FC<{
                     key={v.id}
                     type="button"
                     onClick={() => setParcelVehicle(v.id)}
-                    className={`relative rounded-xl border p-2.5 text-center cursor-pointer ${
-                      active ? 'bg-[#FFF8DC] border-[#F59E0B]' : 'bg-white border-gray-200'
-                    }`}
+                    className={`relative rounded-xl border p-2.5 text-center cursor-pointer ${active ? 'bg-[#FFF8DC] border-[#F59E0B]' : 'bg-white border-gray-200'
+                      }`}
                   >
                     {active && (
                       <span className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-[#ffae2e] text-[#111318] flex items-center justify-center">

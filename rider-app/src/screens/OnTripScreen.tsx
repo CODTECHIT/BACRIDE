@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight, Camera, ChatCircleDots, Check, Motorcycle, Package, Phone, Star } from '@phosphor-icons/react';
+import { BacrideSoloScooterMark } from '../components/BacrideIcons';
 import { RiderMobileMap } from '../components/MobileMap';
 import type { RiderRouteName } from '../navigation/types';
 
@@ -10,12 +11,15 @@ export const OnTripScreen: React.FC<{ onNavigate: (route: RiderRouteName) => voi
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center justify-between shrink-0">
-        <button type="button" onClick={() => onNavigate('IncomingRequest')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={20} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffb338] px-5 pt-7 pb-8 rounded-b-[32px] flex items-center justify-between shrink-0 shadow-md relative z-10">
+        <button type="button" onClick={() => onNavigate('IncomingRequest')} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Back">
+          <ArrowLeft size={24} weight="bold" />
         </button>
-        <span className="font-bold text-lg text-gray-900">On Trip</span>
-        <span className="text-[11px] font-bold bg-white/80 px-3 py-0.5 rounded-full text-gray-800">{tripMode}</span>
+        <div className="flex items-center gap-2.5">
+          <BacrideSoloScooterMark className="w-13 h-8.5 text-[#111318]" />
+          <h2 className="font-black text-xl sm:text-2xl text-gray-900 tracking-tight">On Trip</h2>
+        </div>
+        <span className="text-xs font-black bg-white/95 px-3.5 py-1.5 rounded-full text-gray-800 shadow-2xs">{tripMode}</span>
       </div>
 
       <div className="h-44 w-full shrink-0">

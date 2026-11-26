@@ -37,11 +37,11 @@ export const RiderDrawer: React.FC<{
     <div className="absolute inset-0 z-40 bg-black/50 backdrop-blur-[1px] flex">
       <div className="w-[82%] max-w-[320px] bg-white h-full flex flex-col justify-between shadow-2xl overflow-hidden">
         <div>
-          <div className="bg-gradient-to-br from-[#ffae2e] via-[#ffbe4d] to-[#ffd27d] px-4 pt-5 pb-5">
-            <div className="flex items-center justify-between mb-3.5">
-              <div className="flex items-center gap-2.5">
-                <BacrideSoloScooterMark className="w-10 h-7 text-[#111318]" />
-                <span className="font-display font-black text-xl tracking-tight text-[#111318]">Bacride Partner</span>
+          <div className="bg-gradient-to-br from-[#ffae2e] via-[#ffbe4d] to-[#ffd27d] px-5 pt-7 pb-6 rounded-b-[28px] shadow-sm">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex flex-col items-start select-none">
+                <BacrideSoloScooterMark className="w-12 h-8 text-[#111318]" />
+                <span className="font-display font-black text-base tracking-tight text-[#111318] leading-none mt-1">Bacride Partner</span>
               </div>
               <button
                 type="button"

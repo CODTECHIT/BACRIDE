@@ -13,17 +13,17 @@ export const AccountScreen: React.FC<{
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB] relative">
       {/* Curved golden header wrapping behind the top of the profile card */}
-      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffd27d] px-4 pt-4 pb-12 rounded-b-3xl shrink-0">
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffa826] px-5 pt-7 pb-14 rounded-b-[36px] shrink-0 shadow-md relative z-10">
         <div className="flex items-center justify-between">
-          <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
-            <ArrowLeft size={20} weight="bold" />
+          <button type="button" onClick={() => onNavigate('Home')} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Back">
+            <ArrowLeft size={24} weight="bold" />
           </button>
-          <div className="flex items-center gap-1.5">
-            <User size={19} weight="duotone" className="text-gray-900" />
-            <span className="font-bold text-lg text-gray-900">My Account</span>
+          <div className="flex items-center gap-2">
+            <User size={22} weight="duotone" className="text-gray-900" />
+            <span className="font-black text-2xl text-gray-900">My Account</span>
           </div>
-          <button type="button" onClick={() => setProfileModalOpen(true)} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Settings">
-            <Gear size={20} weight="duotone" />
+          <button type="button" onClick={() => setProfileModalOpen(true)} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Settings">
+            <Gear size={22} weight="duotone" />
           </button>
         </div>
       </div>

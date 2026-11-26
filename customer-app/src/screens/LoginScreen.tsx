@@ -10,9 +10,9 @@ export const LoginScreen: React.FC<{ onNavigate: (route: CustomerRouteName) => v
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-white">
-      <div className="bg-gradient-to-b from-[#ffae2e] to-[#fff8eb] px-5 pt-5 pb-6 shrink-0">
-        <button type="button" onClick={() => (step === 'otp' ? setStep('phone') : onNavigate('Splash'))} className="p-2 rounded-full bg-white/80 hover:bg-white text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={20} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] to-[#fff8eb] px-5 pt-8 pb-9 rounded-b-[36px] shrink-0 shadow-md">
+        <button type="button" onClick={() => (step === 'otp' ? setStep('phone') : onNavigate('Splash'))} className="p-2.5 rounded-full bg-white/80 hover:bg-white text-gray-900 cursor-pointer shadow-xs" aria-label="Back">
+          <ArrowLeft size={22} weight="bold" />
         </button>
         <div className="mt-4 flex flex-col items-center text-center">
           <BacrideLogoLockup size="md" />

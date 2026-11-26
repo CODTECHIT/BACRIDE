@@ -22,30 +22,30 @@ export const BacrideSoloScooterMark: React.FC<{ className?: string }> = ({ class
 );
 
 export const BacrideBadgeLogo: React.FC<{ className?: string }> = ({ className = 'w-10 h-10' }) => (
-  <div className={`rounded-full bg-[#F9B233] flex items-center justify-center p-1 shadow-sm overflow-hidden ${className}`}>
+  <div className={`rounded-full bg-[#ffae2e] flex items-center justify-center p-1 shadow-sm overflow-hidden ${className}`}>
     <img src={`${import.meta.env.BASE_URL}assets/bacride-logo-full.png`} alt="Bacride" className="w-[88%] h-[88%] object-contain" />
   </div>
 );
 
 export const CharminarSkyline: React.FC<{ className?: string }> = ({ className = 'w-full h-14' }) => (
   <svg viewBox="0 0 220 75" fill="none" className={className} aria-hidden="true">
-    <path d="M10 70H210" stroke="#F59E0B" strokeWidth="1.5" strokeOpacity="0.6" />
-    <rect x="20" y="42" width="14" height="28" fill="#F59E0B" fillOpacity="0.35" />
-    <rect x="38" y="34" width="16" height="36" fill="#F59E0B" fillOpacity="0.45" />
-    <path d="M56 70V46C56 40 66 40 66 46V70H56Z" fill="#F59E0B" fillOpacity="0.5" />
+    <path d="M10 70H210" stroke="#ffae2e" strokeWidth="1.5" strokeOpacity="0.6" />
+    <rect x="20" y="42" width="14" height="28" fill="#ffae2e" fillOpacity="0.35" />
+    <rect x="38" y="34" width="16" height="36" fill="#ffae2e" fillOpacity="0.45" />
+    <path d="M56 70V46C56 40 66 40 66 46V70H56Z" fill="#ffae2e" fillOpacity="0.5" />
     <rect x="78" y="24" width="8" height="46" rx="1" fill="#ffae2e" />
     <circle cx="82" cy="20" r="4.5" fill="#ffae2e" />
     <rect x="134" y="24" width="8" height="46" rx="1" fill="#ffae2e" />
     <circle cx="138" cy="20" r="4.5" fill="#ffae2e" />
-    <rect x="86" y="36" width="48" height="34" fill="#F59E0B" fillOpacity="0.85" />
+    <rect x="86" y="36" width="48" height="34" fill="#ffae2e" fillOpacity="0.85" />
     <path d="M98 70V50C98 44 122 44 122 50V70H98Z" fill="#111318" />
     <rect x="92" y="20" width="6" height="16" fill="#ffae2e" />
     <rect x="122" y="20" width="6" height="16" fill="#ffae2e" />
     <circle cx="95" cy="17" r="3" fill="#ffae2e" />
     <circle cx="125" cy="17" r="3" fill="#ffae2e" />
-    <path d="M150 70V46C150 40 162 40 162 46V70H150Z" fill="#F59E0B" fillOpacity="0.5" />
-    <rect x="166" y="36" width="16" height="34" fill="#F59E0B" fillOpacity="0.45" />
-    <rect x="186" y="45" width="14" height="25" fill="#F59E0B" fillOpacity="0.35" />
+    <path d="M150 70V46C150 40 162 40 162 46V70H150Z" fill="#ffae2e" fillOpacity="0.5" />
+    <rect x="166" y="36" width="16" height="34" fill="#ffae2e" fillOpacity="0.45" />
+    <rect x="186" y="45" width="14" height="25" fill="#ffae2e" fillOpacity="0.35" />
   </svg>
 );
 

@@ -10,13 +10,13 @@ export const LoginScreen: React.FC<{ onNavigate: (route: RiderRouteName) => void
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-white">
-      <div className="bg-gradient-to-b from-[#ffae2e] to-[#fff8eb] px-5 pt-5 pb-6 shrink-0">
-        <button type="button" onClick={() => (step === 'otp' ? setStep('phone') : onNavigate('Splash'))} className="p-2 rounded-full bg-white/80 hover:bg-white text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={20} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] to-[#fff8eb] px-5 pt-8 pb-9 rounded-b-[36px] shrink-0 shadow-md">
+        <button type="button" onClick={() => (step === 'otp' ? setStep('phone') : onNavigate('Splash'))} className="p-2.5 rounded-full bg-white/80 hover:bg-white text-gray-900 cursor-pointer shadow-xs" aria-label="Back">
+          <ArrowLeft size={22} weight="bold" />
         </button>
         <div className="mt-4 flex flex-col items-center text-center">
-          <BacrideLogoLockup size="md" />
-          <h1 className="mt-3 text-lg font-extrabold text-gray-900">
+          <BacrideLogoLockup size="lg" />
+          <h1 className="mt-3.5 text-xl font-extrabold text-gray-900">
             {step === 'phone' ? 'Partner Sign In' : 'Verify Partner OTP'}
           </h1>
           <p className="text-xs text-gray-700 mt-1">

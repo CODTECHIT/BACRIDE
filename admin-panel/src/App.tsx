@@ -184,12 +184,12 @@ export function App() {
         }`}
       >
         <div>
-          <div className="px-4 py-4 flex items-center justify-between border-b border-white/10">
-            <div className="flex items-center gap-2.5">
-              <BacrideBadgeLogo className="w-11 h-11" />
+          <div className="px-6 py-6 flex items-center justify-between border-b border-white/10 bg-[#161920]">
+            <div className="flex items-center gap-3.5">
+              <BacrideBadgeLogo className="w-13 h-13" />
               <div className="leading-tight">
-                <div className="font-display font-black text-white text-lg tracking-tight">Bacride</div>
-                <div className="text-[11px] font-medium text-gray-400">Admin</div>
+                <div className="font-display font-black text-white text-2xl tracking-tight">Bacride</div>
+                <div className="text-xs font-bold text-[#ffae2e] tracking-wide mt-0.5">Admin Console</div>
               </div>
             </div>
             <button
@@ -248,17 +248,29 @@ export function App() {
       </aside>
 
       <div className="flex-1 flex flex-col min-w-0">
-        <header className="bg-white border-b border-gray-200 px-3 sm:px-6 py-2.5 flex items-center justify-between gap-2 sm:gap-3 sticky top-0 z-20">
-          <div className="flex items-center gap-2 lg:hidden">
+        <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200/90 px-5 sm:px-8 py-4 sm:py-4.5 flex items-center justify-between gap-3 sm:gap-5 sticky top-0 z-20 shadow-xs">
+          <div className="flex items-center gap-3 lg:hidden">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="p-1.5 rounded-lg text-gray-700 hover:bg-gray-100 cursor-pointer"
+              className="p-2.5 rounded-xl text-gray-700 hover:bg-gray-100 cursor-pointer"
               aria-label="Open sidebar menu"
             >
-              <List size={22} weight="bold" />
+              <List size={26} weight="bold" />
             </button>
-            <BacrideBadgeLogo className="w-8 h-8" />
+            <BacrideBadgeLogo className="w-12 h-12" />
+            <span className="font-display font-black text-xl text-gray-900 tracking-tight">Bacride</span>
+          </div>
+
+          <div className="hidden lg:flex items-center gap-3.5 pr-6 border-r border-gray-200 shrink-0">
+            <BacrideBadgeLogo className="w-12 h-12" />
+            <div className="leading-tight">
+              <div className="flex items-center gap-2">
+                <span className="font-display font-black text-gray-900 text-xl tracking-tight">Bacride</span>
+                <span className="text-xs font-extrabold text-[#111318] bg-[#ffae2e] px-2.5 py-0.5 rounded-full uppercase tracking-wider">Admin</span>
+              </div>
+              <div className="text-xs font-semibold text-gray-500 mt-0.5">Central Management Console</div>
+            </div>
           </div>
 
           <div className="relative flex-1 max-w-md min-w-[120px] sm:min-w-[220px]">

@@ -27,11 +27,12 @@ export const ChooseRideScreen: React.FC<{
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB] relative">
-      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
-        <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={20} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffb338] px-5 pt-7 pb-8 rounded-b-[32px] flex items-center justify-between shrink-0 shadow-md relative z-10">
+        <button type="button" onClick={() => onNavigate('Home')} className="p-2.5 rounded-2xl bg-white/30 hover:bg-white/50 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Back">
+          <ArrowLeft size={24} weight="bold" />
         </button>
-        <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Choose a Ride</h2>
+        <h2 className="font-black text-2xl text-gray-900 tracking-tight text-center flex-1">Choose a Ride</h2>
+        <span className="w-11" />
       </div>
 
       <div className="flex-1 min-h-0 p-4 space-y-3 overflow-y-auto thin-scroll">
@@ -70,9 +71,8 @@ export const ChooseRideScreen: React.FC<{
                 key={opt.id}
                 type="button"
                 onClick={() => setSelectedRide(opt.id)}
-                className={`w-full px-3.5 py-2.5 rounded-xl border flex items-center justify-between text-left transition cursor-pointer ${
-                  active ? 'bg-[#fff8eb] border-[#ffae2e] shadow-2xs' : 'bg-white border-gray-200 hover:bg-gray-50'
-                }`}
+                className={`w-full px-3.5 py-2.5 rounded-xl border flex items-center justify-between text-left transition cursor-pointer ${active ? 'bg-[#fff8eb] border-[#ffae2e] shadow-2xs' : 'bg-white border-gray-200 hover:bg-gray-50'
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <RealisticVehicleIcon type={opt.icon} className="w-10 h-6" />
@@ -90,9 +90,8 @@ export const ChooseRideScreen: React.FC<{
                 <div className="flex items-center gap-2.5">
                   <span className="text-sm font-extrabold text-gray-900 whitespace-nowrap">₹ {opt.fare}</span>
                   <span
-                    className={`w-5 h-5 rounded-full flex items-center justify-center border ${
-                      active ? 'bg-[#ffae2e] border-[#e89a1f] text-[#111318]' : 'border-gray-300'
-                    }`}
+                    className={`w-5 h-5 rounded-full flex items-center justify-center border ${active ? 'bg-[#ffae2e] border-[#e89a1f] text-[#111318]' : 'border-gray-300'
+                      }`}
                   >
                     {active && <Check size={11} weight="bold" />}
                   </span>

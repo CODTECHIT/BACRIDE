@@ -14,25 +14,25 @@ export const HomeScreen: React.FC<{
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#fff9f0] px-4 pt-4 pb-4 shrink-0 shadow-xs">
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffa826] px-5 pt-7 pb-7 rounded-b-[32px] shrink-0 shadow-md relative z-20">
         <div className="flex items-center justify-between">
-          <button type="button" onClick={onOpenMenu} className="p-2 rounded-xl hover:bg-black/10 text-gray-900 cursor-pointer transition-colors" aria-label="Menu">
-            <List size={24} weight="bold" />
+          <button type="button" onClick={onOpenMenu} className="p-2.5 rounded-2xl bg-white/25 hover:bg-white/40 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Menu">
+            <List size={28} weight="bold" />
           </button>
-          <div className="flex items-center gap-2.5">
-            <BacrideSoloScooterMark className="w-10 h-7 text-[#111318]" />
-            <span className="font-display font-black text-xl tracking-tight text-[#111318]">Bacride</span>
+          <div className="flex flex-col items-center justify-center select-none">
+            <BacrideSoloScooterMark className="w-16 h-10 sm:w-18 sm:h-11 text-[#111318]" />
+            <span className="font-display font-black text-base sm:text-lg tracking-tight text-[#111318] leading-none mt-1">Bacride</span>
           </div>
-          <button type="button" onClick={() => onNavigate('Support')} className="p-2 rounded-xl hover:bg-black/10 text-gray-900 cursor-pointer transition-colors" aria-label="Support">
-            <Bell size={22} weight="bold" />
+          <button type="button" onClick={() => onNavigate('Support')} className="p-2.5 rounded-2xl bg-white/25 hover:bg-white/40 text-gray-900 cursor-pointer transition-colors shadow-2xs" aria-label="Support">
+            <Bell size={26} weight="bold" />
           </button>
         </div>
-        <div className="mt-3 bg-white/85 backdrop-blur-xs rounded-2xl px-4 py-2.5 shadow-xs border border-white/60">
-          <h2 className="font-bold text-lg text-gray-900 flex items-center gap-1.5 leading-tight">
+        <div className="mt-4 bg-white/95 backdrop-blur-xs rounded-2xl px-4 py-3.5 shadow-xs border border-white/80">
+          <h2 className="font-black text-base sm:text-lg text-gray-900 flex items-center gap-2 leading-tight">
             <span>Hi, Arif!</span>
-            <HandWaving size={19} weight="duotone" className="text-amber-700" />
+            <HandWaving size={18} weight="duotone" className="text-amber-700" />
           </h2>
-          <p className="text-xs text-gray-600 mt-0.5">Go online to receive ride &amp; delivery requests.</p>
+          <p className="text-xs text-gray-600 mt-1 font-medium">Go online to receive ride &amp; delivery requests.</p>
         </div>
       </div>
 
