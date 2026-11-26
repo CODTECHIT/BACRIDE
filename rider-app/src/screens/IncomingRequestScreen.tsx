@@ -83,7 +83,7 @@ export const IncomingRequestScreen: React.FC<{ onNavigate: (route: RiderRouteNam
           <button
             type="button"
             onClick={() => onNavigate('OnTrip')}
-            className="py-3.5 rounded-full bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-sm flex items-center justify-center gap-1.5 shadow-sm cursor-pointer transition-colors"
+            className="py-3.5 rounded-full btn-glass-primary font-bold text-sm flex items-center justify-center gap-1.5 cursor-pointer"
           >
             <span>Accept</span>
             <ArrowRight size={16} weight="bold" />

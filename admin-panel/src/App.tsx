@@ -214,8 +214,10 @@ export function App() {
                     setSection(item.id);
                     setMobileMenuOpen(false);
                   }}
-                  className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs transition cursor-pointer ${
-                    active ? 'bg-[#ffae2e] text-[#111318] font-bold shadow-xs' : 'text-gray-300 hover:bg-white/5 hover:text-white font-medium'
+                  className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs transition cursor-pointer select-none ${
+                    active
+                      ? 'bg-gradient-to-r from-[#FFC554] via-[#FFAE2E] to-[#F59E0B] text-[#111318] font-black shadow-[0_4px_14px_rgba(255,174,46,0.35),inset_0_1.5px_1px_rgba(255,255,255,0.7)] border border-white/60'
+                      : 'text-gray-300 hover:bg-white/5 hover:text-white font-medium'
                   }`}
                 >
                   <span className="flex items-center gap-2.5 truncate">
@@ -302,11 +304,11 @@ export function App() {
             <button
               type="button"
               onClick={() => setSection('sos')}
-              className="flex items-center gap-1 sm:gap-1.5 bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] px-2 sm:px-3 py-1.5 rounded-lg text-xs font-bold shadow-2xs cursor-pointer transition-colors"
+              className="flex items-center gap-1 sm:gap-1.5 btn-glass-primary px-3 py-1.5 rounded-full text-xs font-black shadow-sm cursor-pointer"
             >
               <Siren size={14} weight="fill" />
               <span className="hidden sm:inline">SOS Alerts</span>
-              <span className="w-4 h-4 rounded-full bg-red-600 text-white text-[10px] flex items-center justify-center">3</span>
+              <span className="w-4 h-4 rounded-full bg-red-600 text-white text-[10px] flex items-center justify-center font-bold">3</span>
             </button>
 
             <div className="flex items-center gap-1.5 sm:gap-2 pl-1.5 sm:pl-2 border-l border-gray-200">
@@ -337,14 +339,16 @@ export function App() {
                     <span>Today, 25 Nov 2026</span>
                     <CaretDown size={12} className="text-gray-400" />
                   </div>
-                  <div className="bg-white border border-gray-200 rounded-lg p-0.5 inline-flex shadow-2xs shrink-0">
+                  <div className="bg-white/80 backdrop-blur-md border border-gray-200/90 rounded-full p-0.5 inline-flex shadow-xs shrink-0">
                     {(['Today', 'This Week', 'This Month', 'Custom'] as const).map((r) => (
                       <button
                         key={r}
                         type="button"
                         onClick={() => setDateRange(r)}
-                        className={`px-2.5 sm:px-3 py-1 rounded-md text-xs font-semibold transition cursor-pointer shrink-0 ${
-                          dateRange === r ? 'bg-[#ffae2e] text-[#111318] font-bold' : 'text-gray-600 hover:text-gray-900'
+                        className={`px-3 py-1 rounded-full text-xs transition cursor-pointer shrink-0 ${
+                          dateRange === r
+                            ? 'btn-glass-primary font-black shadow-xs'
+                            : 'text-gray-600 hover:text-gray-900 font-semibold'
                         }`}
                       >
                         {r}
@@ -1176,7 +1180,7 @@ export function App() {
                           setFareSaved(true);
                           setTimeout(() => setFareSaved(false), 2000);
                         }}
-                        className="px-5 py-2 rounded-lg bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-xs shadow-xs cursor-pointer transition-colors"
+                        className="px-6 py-2.5 rounded-full btn-glass-primary font-black text-xs cursor-pointer shadow-sm"
                       >
                         Save Changes
                       </button>

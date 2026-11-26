@@ -47,7 +47,7 @@ export const LoginScreen: React.FC<{ onNavigate: (route: RiderRouteName) => void
             <button
               type="button"
               onClick={() => setStep('otp')}
-              className="w-full py-3.5 rounded-full bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-sm shadow-sm flex items-center justify-center gap-2 cursor-pointer transition-colors"
+              className="w-full py-3.5 rounded-full btn-glass-primary font-bold text-sm flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>Send OTP</span>
               <ArrowRight size={16} weight="bold" />
@@ -76,7 +76,7 @@ export const LoginScreen: React.FC<{ onNavigate: (route: RiderRouteName) => void
             <button
               type="button"
               onClick={() => onNavigate('Kyc')}
-              className="w-full py-3.5 rounded-full bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-sm shadow-sm flex items-center justify-center gap-2 cursor-pointer transition-colors"
+              className="w-full py-3.5 rounded-full btn-glass-primary font-bold text-sm flex items-center justify-center gap-2 cursor-pointer"
             >
               <ShieldCheck size={17} weight="bold" />
               <span>Verify &amp; Open KYC</span>
