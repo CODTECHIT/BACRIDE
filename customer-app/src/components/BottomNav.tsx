@@ -16,7 +16,7 @@ export const CustomerBottomNav: React.FC<{
   ];
 
   return (
-    <nav className="nav-glass px-3 py-2 flex items-center justify-around shrink-0 relative z-20" aria-label="Bottom Navigation">
+    <nav className="nav-glass px-4 py-2 flex items-center justify-around shrink-0 relative z-20" aria-label="Bottom Navigation">
       {tabs.map((tab) => {
         const active = activeTab === tab.id;
         const Icon = tab.icon;
@@ -25,14 +25,19 @@ export const CustomerBottomNav: React.FC<{
             key={tab.id}
             type="button"
             onClick={() => onSelectTab(tab.id, tab.route)}
-            className={`flex-1 flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition-all duration-200 cursor-pointer py-1.5 px-2 rounded-2xl ${
+            className={`flex-1 flex flex-col items-center justify-center gap-1 text-[11px] transition-colors cursor-pointer py-1 focus:outline-none select-none ${
               active
-                ? 'nav-glass-active text-[#d97c00] font-bold'
-                : 'text-gray-500 hover:text-gray-800 hover:bg-black/[0.03]'
+                ? 'text-amber-500 font-bold'
+                : 'text-gray-400 hover:text-gray-600 font-medium'
             }`}
           >
-            <Icon size={22} weight={active ? 'fill' : 'regular'} />
-            <span>{tab.label}</span>
+            <Icon size={23} weight={active ? 'fill' : 'regular'} className="transition-transform active:scale-95" />
+            <span className="leading-none">{tab.label}</span>
+            {active ? (
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-0.5" />
+            ) : (
+              <span className="w-1.5 h-1.5 mt-0.5 opacity-0" />
+            )}
           </button>
         );
       })}

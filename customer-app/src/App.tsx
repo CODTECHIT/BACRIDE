@@ -22,7 +22,6 @@ const INITIAL_TRANSACTIONS: WalletTransaction[] = [
 
 export function App() {
   const [route, setRoute] = useState<CustomerRouteName>('Splash');
-  const [activeNavTab, setActiveNavTab] = useState<CustomerNavTab>('Home');
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [selectedRide, setSelectedRide] = useState('bike');
   const [selectedCategory, setSelectedCategory] = useState<'Bike' | 'Auto' | 'Cab'>('Bike');
@@ -32,18 +31,22 @@ export function App() {
   const [walletBalance, setWalletBalance] = useState(1250);
   const [transactions, setTransactions] = useState<WalletTransaction[]>(INITIAL_TRANSACTIONS);
 
-  const navigate = (next: CustomerRouteName) => {
-    setRoute(next);
-    if (next === 'Home' || next === 'Notifications') setActiveNavTab('Home');
-    else if (next === 'ChooseRide' || next === 'Tracking') setActiveNavTab('Ride');
-    else if (next === 'Parcel') setActiveNavTab('Parcel');
-    else if (next === 'Account' || next === 'History' || next === 'SavedPlaces' || next === 'Support' || next === 'Wallet') {
-      setActiveNavTab('Account');
+  const getActiveTab = (currentRoute: CustomerRouteName): CustomerNavTab => {
+    if (currentRoute === 'Parcel') return 'Parcel';
+    if (currentRoute === 'ChooseRide' || currentRoute === 'Tracking') return 'Ride';
+    if (currentRoute === 'Account' || currentRoute === 'History' || currentRoute === 'SavedPlaces' || currentRoute === 'Support' || currentRoute === 'Wallet') {
+      return 'Account';
     }
+    return 'Home';
   };
 
-  const handleBottomTab = (tab: CustomerNavTab, targetRoute: CustomerRouteName) => {
-    setActiveNavTab(tab);
+  const activeNavTab = getActiveTab(route);
+
+  const navigate = (next: CustomerRouteName) => {
+    setRoute(next);
+  };
+
+  const handleBottomTab = (_tab: CustomerNavTab, targetRoute: CustomerRouteName) => {
     setRoute(targetRoute);
   };
 
