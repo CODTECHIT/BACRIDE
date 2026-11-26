@@ -16,31 +16,37 @@ export const CustomerBottomNav: React.FC<{
   ];
 
   return (
-    <nav className="nav-glass px-4 py-2 flex items-center justify-around shrink-0 relative z-20" aria-label="Bottom Navigation">
-      {tabs.map((tab) => {
-        const active = activeTab === tab.id;
-        const Icon = tab.icon;
-        return (
-          <button
-            key={tab.id}
-            type="button"
-            onClick={() => onSelectTab(tab.id, tab.route)}
-            className={`flex-1 flex flex-col items-center justify-center gap-1 text-[11px] transition-colors cursor-pointer py-1 focus:outline-none select-none ${
-              active
-                ? 'text-amber-500 font-bold'
-                : 'text-gray-400 hover:text-gray-600 font-medium'
-            }`}
-          >
-            <Icon size={23} weight={active ? 'fill' : 'regular'} className="transition-transform active:scale-95" />
-            <span className="leading-none">{tab.label}</span>
-            {active ? (
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-0.5" />
-            ) : (
-              <span className="w-1.5 h-1.5 mt-0.5 opacity-0" />
-            )}
-          </button>
-        );
-      })}
-    </nav>
+    <div className="shrink-0 px-3.5 pb-3 pt-1 bg-gradient-to-t from-[#F9FAFB] via-[#F9FAFB]/90 to-transparent relative z-20">
+      <nav
+        className="bg-white/95 backdrop-blur-xl border border-white/80 rounded-2xl p-1.5 flex items-center justify-between shadow-[0_10px_28px_-6px_rgba(0,0,0,0.1),0_4px_12px_rgba(0,0,0,0.04),inset_0_1px_1px_rgba(255,255,255,0.95)]"
+        aria-label="Bottom Navigation"
+      >
+        {tabs.map((tab) => {
+          const active = activeTab === tab.id;
+          const Icon = tab.icon;
+          return (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => onSelectTab(tab.id, tab.route)}
+              className={`flex-1 flex flex-col items-center justify-center gap-1 py-1.5 px-1 rounded-xl transition-all duration-200 cursor-pointer select-none focus:outline-none ${
+                active
+                  ? 'bg-gradient-to-b from-[#FFFBEB] to-[#FEF3C7] text-amber-700 shadow-xs border border-amber-300/60 font-bold scale-[1.02]'
+                  : 'text-gray-400 hover:text-gray-700 hover:bg-black/[0.02] font-medium'
+              }`}
+            >
+              <Icon
+                size={22}
+                weight={active ? 'fill' : 'duotone'}
+                className={`transition-transform duration-200 ${active ? 'text-amber-600 scale-105' : 'text-gray-400'}`}
+              />
+              <span className={`text-[11px] leading-tight ${active ? 'font-extrabold text-amber-700' : 'text-gray-500'}`}>
+                {tab.label}
+              </span>
+            </button>
+          );
+        })}
+      </nav>
+    </div>
   );
 };
