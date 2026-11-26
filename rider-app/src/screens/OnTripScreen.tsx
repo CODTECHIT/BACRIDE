@@ -10,11 +10,11 @@ export const OnTripScreen: React.FC<{ onNavigate: (route: RiderRouteName) => voi
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#FCD34D] to-[#FDE68A] px-4 py-3 flex items-center justify-between shrink-0">
-        <button type="button" onClick={() => onNavigate('IncomingRequest')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={18} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center justify-between shrink-0">
+        <button type="button" onClick={() => onNavigate('IncomingRequest')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+          <ArrowLeft size={20} weight="bold" />
         </button>
-        <span className="font-bold text-base text-gray-900">On Trip</span>
+        <span className="font-bold text-lg text-gray-900">On Trip</span>
         <span className="text-[11px] font-bold bg-white/80 px-3 py-0.5 rounded-full text-gray-800">{tripMode}</span>
       </div>
 
@@ -50,7 +50,7 @@ export const OnTripScreen: React.FC<{ onNavigate: (route: RiderRouteName) => voi
             type="button"
             onClick={() => setTripMode('Ride')}
             className={`py-2 rounded-xl text-xs font-bold border flex items-center justify-center gap-1.5 cursor-pointer ${
-              tripMode === 'Ride' ? 'bg-[#FBBF24] border-[#F59E0B] text-[#111318]' : 'bg-white border-gray-200 text-gray-600'
+              tripMode === 'Ride' ? 'bg-[#ffae2e] border-[#e89a1f] text-[#111318]' : 'bg-white border-gray-200 text-gray-600'
             }`}
           >
             <Motorcycle size={15} weight="duotone" />
@@ -60,7 +60,7 @@ export const OnTripScreen: React.FC<{ onNavigate: (route: RiderRouteName) => voi
             type="button"
             onClick={() => setTripMode('Parcel')}
             className={`py-2 rounded-xl text-xs font-bold border flex items-center justify-center gap-1.5 cursor-pointer ${
-              tripMode === 'Parcel' ? 'bg-[#FBBF24] border-[#F59E0B] text-[#111318]' : 'bg-white border-gray-200 text-gray-600'
+              tripMode === 'Parcel' ? 'bg-[#ffae2e] border-[#e89a1f] text-[#111318]' : 'bg-white border-gray-200 text-gray-600'
             }`}
           >
             <Package size={15} weight="duotone" />
@@ -83,7 +83,7 @@ export const OnTripScreen: React.FC<{ onNavigate: (route: RiderRouteName) => voi
             type="button"
             onClick={() => setRideStarted(true)}
             className={`w-full py-2.5 rounded-full font-bold text-xs flex items-center justify-center gap-1.5 cursor-pointer ${
-              rideStarted ? 'bg-emerald-600 text-white' : 'bg-[#FBBF24] hover:bg-amber-400 text-[#111318]'
+              rideStarted ? 'bg-emerald-600 text-white' : 'bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318]'
             }`}
           >
             <span>{rideStarted ? 'Trip In Progress' : 'Start Ride'}</span>

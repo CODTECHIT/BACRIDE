@@ -19,11 +19,11 @@ export const AdminCityMap: React.FC<{
         </text>
 
         <path d="M160 330 C280 315 390 300 495 318 C580 332 660 312 760 295" stroke="#9AD0F5" strokeWidth="10" fill="none" opacity="0.7" />
-        <path d="M0 120 C160 110 320 95 490 120 C600 135 690 120 760 110" stroke="#FCD34D" strokeWidth="5.5" fill="none" />
-        <path d="M0 245 C140 235 280 215 430 235 C560 250 670 235 760 225" stroke="#FCD34D" strokeWidth="5" fill="none" />
-        <path d="M190 0 C205 110 215 240 240 400" stroke="#FCD34D" strokeWidth="5" fill="none" />
-        <path d="M405 0 C415 130 410 250 435 400" stroke="#FDE047" strokeWidth="4.5" fill="none" />
-        <path d="M580 0 C560 120 555 260 565 400" stroke="#FCD34D" strokeWidth="4.5" fill="none" />
+        <path d="M0 120 C160 110 320 95 490 120 C600 135 690 120 760 110" stroke="#ffae2e" strokeWidth="5.5" fill="none" />
+        <path d="M0 245 C140 235 280 215 430 235 C560 250 670 235 760 225" stroke="#ffae2e" strokeWidth="5" fill="none" />
+        <path d="M190 0 C205 110 215 240 240 400" stroke="#ffae2e" strokeWidth="5" fill="none" />
+        <path d="M405 0 C415 130 410 250 435 400" stroke="#ffbe4d" strokeWidth="4.5" fill="none" />
+        <path d="M580 0 C560 120 555 260 565 400" stroke="#ffae2e" strokeWidth="4.5" fill="none" />
         <path d="M60 60 L700 70 M30 180 L720 185 M50 300 L700 305 M110 20 L130 380 M310 15 L320 385 M500 20 L490 380 M660 25 L670 380" stroke="#FFFFFF" strokeWidth="2.5" opacity="0.9" />
         <path d="M150 90 L380 210 M240 160 L450 280 M470 90 L640 200" stroke="#FFFFFF" strokeWidth="2" opacity="0.85" />
 

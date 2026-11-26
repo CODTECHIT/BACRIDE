@@ -20,36 +20,36 @@ export const HomeScreen: React.FC<{
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB] relative">
       {/* Top Yellow Nav Bar fading into Curved Soft Cream Greeting Band (exact match to costumerUI.jpeg Screen 2) */}
-      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#fff9f0] px-4 pt-4 pb-4 shrink-0 shadow-xs">
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#fff9f0] px-4.5 pt-6 pb-5 shrink-0 shadow-xs">
         <div className="flex items-center justify-between">
           <button type="button" onClick={onOpenMenu} className="p-2 rounded-xl hover:bg-black/10 text-gray-900 cursor-pointer transition-colors" aria-label="Menu">
-            <List size={25} weight="bold" />
+            <List size={28} weight="bold" />
           </button>
-          <div className="flex items-center gap-2.5">
-            <BacrideDualScooterMark className="w-11 h-8 text-[#111318]" />
-            <span className="font-display font-black text-xl tracking-tight text-[#111318]">Bacride</span>
+          <div className="flex items-center gap-3">
+            <BacrideDualScooterMark className="w-13 h-9 text-[#111318]" />
+            <span className="font-display font-black text-2xl tracking-tight text-[#111318]">Bacride</span>
           </div>
           <button type="button" onClick={() => onNavigate('Notifications')} className="p-2 rounded-xl hover:bg-black/10 text-gray-900 relative cursor-pointer transition-colors" aria-label="Notifications">
-            <Bell size={23} weight="bold" />
+            <Bell size={26} weight="bold" />
             <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-red-500 ring-2 ring-[#ffae2e]" />
           </button>
         </div>
-        <div className="mt-3 bg-white/85 backdrop-blur-xs rounded-2xl px-4 py-2.5 -mx-0.5 shadow-xs border border-white/60">
-          <h2 className="font-bold text-lg text-gray-900 flex items-center gap-1.5 leading-tight">
+        <div className="mt-3.5 bg-white/90 backdrop-blur-xs rounded-2xl px-4.5 py-3 shadow-xs border border-white/70">
+          <h2 className="font-extrabold text-xl text-gray-900 flex items-center gap-2 leading-tight">
             <span>Hi, Arif</span>
-            <HandWaving size={19} weight="duotone" className="text-amber-700" />
+            <HandWaving size={21} weight="duotone" className="text-amber-700" />
           </h2>
           <p className="text-xs text-gray-600 mt-0.5">Where to go today?</p>
         </div>
       </div>
 
-      {/* Live Map */}
-      <div className="h-44 w-full shrink-0">
+      {/* Live Map: Generous height taking full advantage of vertical space */}
+      <div className="h-64 sm:h-72 w-full shrink-0 relative">
         <MobileMap variant="customer-home" />
       </div>
 
       {/* 3 Category Cards overlapping the bottom edge of the map */}
-      <div className="flex-1 min-h-0 px-4 pb-6 -mt-8 relative z-10 flex flex-col justify-between overflow-y-auto thin-scroll">
+      <div className="flex-1 min-h-0 px-4 pb-5 -mt-8 relative z-10 flex flex-col justify-between overflow-y-auto thin-scroll">
         <div className="space-y-3">
           <div className="grid grid-cols-3 gap-2.5">
             {([

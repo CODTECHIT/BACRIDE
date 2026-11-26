@@ -14,13 +14,13 @@ import type { RiderRouteName } from '../navigation/types';
 
 export const KycScreen: React.FC<{ onNavigate: (route: RiderRouteName) => void }> = ({ onNavigate }) => (
   <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-    <div className="bg-gradient-to-b from-[#FCD34D] to-[#FDE68A] px-4 py-3 flex items-center justify-between shrink-0">
-      <button type="button" onClick={() => onNavigate('Home')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-        <ArrowLeft size={18} weight="bold" />
+    <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center justify-between shrink-0">
+      <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+        <ArrowLeft size={20} weight="bold" />
       </button>
-      <div className="flex items-center gap-1.5">
-        <BacrideSoloScooterMark className="w-6 h-4 text-[#111318]" />
-        <span className="font-display font-extrabold text-base text-[#111318]">Bacride</span>
+      <div className="flex items-center gap-2">
+        <BacrideSoloScooterMark className="w-10 h-7 text-[#111318]" />
+        <span className="font-display font-black text-xl tracking-tight text-[#111318]">Bacride</span>
       </div>
       <span className="w-6" />
     </div>

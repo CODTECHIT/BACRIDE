@@ -15,13 +15,13 @@ export const TrackingScreen: React.FC<{ onNavigate: (route: CustomerRouteName) =
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB] relative">
-      <div className="bg-gradient-to-b from-[#FCD34D] to-[#FDE68A] px-4 py-3 flex items-center justify-between shrink-0">
-        <button type="button" onClick={() => onNavigate('ChooseRide')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={18} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center justify-between shrink-0">
+        <button type="button" onClick={() => onNavigate('ChooseRide')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+          <ArrowLeft size={20} weight="bold" />
         </button>
-        <div className="flex items-center gap-1.5">
-          <BacrideDualScooterMark className="w-6 h-4 text-[#111318]" />
-          <span className="font-bold text-base text-gray-900">Your Ride</span>
+        <div className="flex items-center gap-2">
+          <BacrideDualScooterMark className="w-9 h-6.5 text-[#111318]" />
+          <span className="font-display font-extrabold text-lg text-gray-900">Your Ride</span>
         </div>
         <span className="w-6" />
       </div>
@@ -124,7 +124,7 @@ export const TrackingScreen: React.FC<{ onNavigate: (route: CustomerRouteName) =
             <div className="space-y-2 max-h-48 overflow-y-auto">
               {messages.map((m, i) => (
                 <div key={i} className={`flex ${m.from === 'me' ? 'justify-end' : 'justify-start'}`}>
-                  <span className={`px-3 py-2 rounded-2xl text-xs max-w-[80%] ${m.from === 'me' ? 'bg-[#FBBF24] text-[#111318] font-semibold' : 'bg-gray-100 text-gray-800'}`}>
+                  <span className={`px-3 py-2 rounded-2xl text-xs max-w-[80%] ${m.from === 'me' ? 'bg-[#ffae2e] text-[#111318] font-semibold' : 'bg-gray-100 text-gray-800'}`}>
                     {m.text}
                   </span>
                 </div>

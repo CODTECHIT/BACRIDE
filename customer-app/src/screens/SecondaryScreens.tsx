@@ -9,11 +9,11 @@ export const HistoryScreen: React.FC<{ onNavigate: (route: CustomerRouteName) =>
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#FCD34D] to-[#FDE68A] px-4 py-3 flex items-center gap-3 shrink-0">
-        <button type="button" onClick={() => onNavigate('Account')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={18} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
+        <button type="button" onClick={() => onNavigate('Account')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+          <ArrowLeft size={20} weight="bold" />
         </button>
-        <h2 className="font-bold text-base text-gray-900 flex-1 text-center pr-7">Order History</h2>
+        <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Order History</h2>
       </div>
       <div className="p-3 bg-white border-b border-gray-200 grid grid-cols-2 gap-2 shrink-0">
         {(['Rides', 'Parcels'] as const).map((t) => (
@@ -21,7 +21,7 @@ export const HistoryScreen: React.FC<{ onNavigate: (route: CustomerRouteName) =>
             key={t}
             type="button"
             onClick={() => setTab(t)}
-            className={`py-2 rounded-xl text-xs font-bold cursor-pointer ${tab === t ? 'bg-[#FBBF24] text-[#111318]' : 'bg-gray-100 text-gray-600'}`}
+            className={`py-2 rounded-xl text-xs font-bold cursor-pointer transition-colors ${tab === t ? 'bg-[#ffae2e] text-[#111318]' : 'bg-gray-100 text-gray-600'}`}
           >
             {t}
           </button>
@@ -68,11 +68,11 @@ export const SavedPlacesScreen: React.FC<{ onNavigate: (route: CustomerRouteName
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#FCD34D] to-[#FDE68A] px-4 py-3 flex items-center gap-3 shrink-0">
-        <button type="button" onClick={() => onNavigate('Account')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={18} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
+        <button type="button" onClick={() => onNavigate('Account')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+          <ArrowLeft size={20} weight="bold" />
         </button>
-        <h2 className="font-bold text-base text-gray-900 flex-1 text-center pr-7">Saved Places</h2>
+        <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Saved Places</h2>
       </div>
       <div className="flex-1 min-h-0 p-4 space-y-2.5 overflow-y-auto thin-scroll">
         {places.map((p) => (
@@ -100,7 +100,7 @@ export const SavedPlacesScreen: React.FC<{ onNavigate: (route: CustomerRouteName
                 setNewAddr('');
               }
             }}
-            className="px-3 py-1.5 rounded-lg bg-[#FBBF24] text-[#111318] text-xs font-bold flex items-center gap-1 cursor-pointer"
+            className="px-3 py-1.5 rounded-lg bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] text-xs font-bold flex items-center gap-1 cursor-pointer transition-colors"
           >
             <Plus size={13} weight="bold" /> Add
           </button>
@@ -115,11 +115,11 @@ export const SupportScreen: React.FC<{ onNavigate: (route: CustomerRouteName) =>
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#FCD34D] to-[#FDE68A] px-4 py-3 flex items-center gap-3 shrink-0">
-        <button type="button" onClick={() => onNavigate('Account')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={18} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
+        <button type="button" onClick={() => onNavigate('Account')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+          <ArrowLeft size={20} weight="bold" />
         </button>
-        <h2 className="font-bold text-base text-gray-900 flex-1 text-center pr-7">Help &amp; Support</h2>
+        <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Help &amp; Support</h2>
       </div>
       <div className="flex-1 min-h-0 p-4 space-y-3 overflow-y-auto thin-scroll">
         <div className="bg-white rounded-xl border border-gray-200 p-3.5 space-y-2">
@@ -128,7 +128,7 @@ export const SupportScreen: React.FC<{ onNavigate: (route: CustomerRouteName) =>
             <span>Raise a Support Ticket</span>
           </div>
           <textarea rows={3} placeholder="Describe ride, parcel, payment, or lost-item issue..." className="w-full rounded-xl border border-gray-200 p-2.5 text-xs focus:outline-none focus:border-amber-400" />
-          <button type="button" onClick={() => setSent(true)} className="w-full py-2.5 rounded-full bg-[#FBBF24] text-[#111318] text-xs font-bold cursor-pointer">
+          <button type="button" onClick={() => setSent(true)} className="w-full py-2.5 rounded-full bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] text-xs font-bold cursor-pointer transition-colors">
             {sent ? 'Ticket Submitted (#SUP-4091)' : 'Submit Ticket'}
           </button>
         </div>
@@ -139,11 +139,11 @@ export const SupportScreen: React.FC<{ onNavigate: (route: CustomerRouteName) =>
 
 export const NotificationsScreen: React.FC<{ onNavigate: (route: CustomerRouteName) => void }> = ({ onNavigate }) => (
   <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-    <div className="bg-gradient-to-b from-[#FCD34D] to-[#FDE68A] px-4 py-3 flex items-center gap-3 shrink-0">
-      <button type="button" onClick={() => onNavigate('Home')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-        <ArrowLeft size={18} weight="bold" />
+    <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
+      <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+        <ArrowLeft size={20} weight="bold" />
       </button>
-      <h2 className="font-bold text-base text-gray-900 flex-1 text-center pr-7">Notifications</h2>
+      <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Notifications</h2>
     </div>
     <div className="flex-1 min-h-0 p-4 space-y-2.5 overflow-y-auto thin-scroll">
       {CUSTOMER_NOTIFICATIONS.map((n) => (

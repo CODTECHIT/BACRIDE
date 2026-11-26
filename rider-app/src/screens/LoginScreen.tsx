@@ -10,9 +10,9 @@ export const LoginScreen: React.FC<{ onNavigate: (route: RiderRouteName) => void
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-white">
-      <div className="bg-gradient-to-b from-[#FCD34D] to-[#FEF3C7] px-5 pt-4 pb-6 shrink-0">
-        <button type="button" onClick={() => (step === 'otp' ? setStep('phone') : onNavigate('Splash'))} className="p-1.5 rounded-full bg-white/70 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={18} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] to-[#fff8eb] px-5 pt-5 pb-6 shrink-0">
+        <button type="button" onClick={() => (step === 'otp' ? setStep('phone') : onNavigate('Splash'))} className="p-2 rounded-full bg-white/80 hover:bg-white text-gray-900 cursor-pointer" aria-label="Back">
+          <ArrowLeft size={20} weight="bold" />
         </button>
         <div className="mt-4 flex flex-col items-center text-center">
           <BacrideLogoLockup size="md" />
@@ -47,7 +47,7 @@ export const LoginScreen: React.FC<{ onNavigate: (route: RiderRouteName) => void
             <button
               type="button"
               onClick={() => setStep('otp')}
-              className="w-full py-3.5 rounded-full bg-[#FBBF24] hover:bg-amber-400 text-[#111318] font-bold text-sm shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full py-3.5 rounded-full bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-sm shadow-sm flex items-center justify-center gap-2 cursor-pointer transition-colors"
             >
               <span>Send OTP</span>
               <ArrowRight size={16} weight="bold" />
@@ -76,7 +76,7 @@ export const LoginScreen: React.FC<{ onNavigate: (route: RiderRouteName) => void
             <button
               type="button"
               onClick={() => onNavigate('Kyc')}
-              className="w-full py-3.5 rounded-full bg-[#FBBF24] hover:bg-amber-400 text-[#111318] font-bold text-sm shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full py-3.5 rounded-full bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-sm shadow-sm flex items-center justify-center gap-2 cursor-pointer transition-colors"
             >
               <ShieldCheck size={17} weight="bold" />
               <span>Verify &amp; Open KYC</span>

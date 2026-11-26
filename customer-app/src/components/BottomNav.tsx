@@ -27,7 +27,7 @@ export const CustomerBottomNav: React.FC<{
             onClick={() => onSelectTab(tab.id, tab.route)}
             className={`flex-1 flex flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition-all duration-200 cursor-pointer py-1.5 px-2 rounded-2xl ${
               active
-                ? 'nav-glass-active text-amber-600 font-bold'
+                ? 'nav-glass-active text-[#d97c00] font-bold'
                 : 'text-gray-500 hover:text-gray-800 hover:bg-black/[0.03]'
             }`}
           >

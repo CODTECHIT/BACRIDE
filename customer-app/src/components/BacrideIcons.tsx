@@ -35,7 +35,7 @@ export const RealisticVehicleIcon: React.FC<{
         <circle cx="37" cy="21" r="5.8" fill="#111827" />
         <circle cx="37" cy="21" r="2.6" fill="#E5E7EB" />
         <rect x="6" y="18" width="10" height="3" rx="1.5" fill="#4B5563" />
-        <path d="M8 16L13 11H23L27 16H31L29 7H34L39 17L42 19H33C31 16 28 16 26 19H15C13 16 10 16 8 16Z" fill="#F59E0B" stroke="#111827" strokeWidth="1.2" strokeLinejoin="round" />
+        <path d="M8 16L13 11H23L27 16H31L29 7H34L39 17L42 19H33C31 16 28 16 26 19H15C13 16 10 16 8 16Z" fill="#ffae2e" stroke="#111827" strokeWidth="1.2" strokeLinejoin="round" />
         <path d="M12 11C13 9 18 9 21 11H12Z" fill="#111827" />
         <path d="M29 7L27 4M29 7H35" stroke="#111827" strokeWidth="1.8" strokeLinecap="round" />
         <circle cx="35.5" cy="9.5" r="2" fill="#FEF08A" stroke="#111827" strokeWidth="1" />

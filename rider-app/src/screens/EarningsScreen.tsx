@@ -16,11 +16,11 @@ export const EarningsScreen: React.FC<{
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB] relative">
-      <div className="bg-gradient-to-b from-[#FCD34D] to-[#FDE68A] px-4 py-3 flex items-center justify-between shrink-0">
-        <button type="button" onClick={() => onNavigate('Home')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={18} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center justify-between shrink-0">
+        <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+          <ArrowLeft size={20} weight="bold" />
         </button>
-        <span className="font-bold text-base text-gray-900">Earnings &amp; Wallet</span>
+        <span className="font-bold text-lg text-gray-900">Earnings &amp; Wallet</span>
         <span className="w-6" />
       </div>
 
@@ -28,7 +28,7 @@ export const EarningsScreen: React.FC<{
         <div className="relative overflow-hidden bg-[#161920] text-white rounded-2xl p-3.5 flex items-center justify-between gap-2 shadow-md">
           <div
             className="absolute -right-6 -top-6 w-36 h-36 rounded-full pointer-events-none"
-            style={{ background: 'radial-gradient(circle, rgba(251,191,36,0.22) 0%, rgba(251,191,36,0) 70%)' }}
+            style={{ background: 'radial-gradient(circle, rgba(255,174,46,0.3) 0%, rgba(255,174,46,0) 70%)' }}
           />
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
@@ -42,7 +42,7 @@ export const EarningsScreen: React.FC<{
           <button
             type="button"
             onClick={() => setWithdrawOpen(true)}
-            className="px-3.5 py-2 rounded-full bg-[#FBBF24] text-[#111318] font-bold text-xs shrink-0 hover:bg-amber-400 cursor-pointer"
+            className="px-3.5 py-2 rounded-full bg-[#ffae2e] text-[#111318] font-bold text-xs shrink-0 hover:bg-[#f09f20] cursor-pointer transition-colors"
           >
             Withdraw
           </button>
@@ -60,8 +60,8 @@ export const EarningsScreen: React.FC<{
               key={tab}
               type="button"
               onClick={() => setEarningsTab(tab)}
-              className={`py-1.5 rounded-lg text-xs font-bold cursor-pointer ${
-                earningsTab === tab ? 'bg-[#FBBF24] text-[#111318]' : 'text-gray-600'
+              className={`py-1.5 rounded-lg text-xs font-bold cursor-pointer transition-colors ${
+                earningsTab === tab ? 'bg-[#ffae2e] text-[#111318]' : 'text-gray-600'
               }`}
             >
               {tab}
@@ -161,7 +161,7 @@ export const EarningsScreen: React.FC<{
                     setWithdrawSuccess(true);
                     setTimeout(() => setWithdrawSuccess(false), 2500);
                   }}
-                  className="py-3 rounded-xl border border-amber-300 bg-amber-50 hover:bg-[#FBBF24] text-sm font-extrabold text-gray-900 disabled:opacity-40 cursor-pointer"
+                  className="py-3 rounded-xl border border-[#ffae2e]/50 bg-amber-50 hover:bg-[#ffae2e] text-sm font-extrabold text-gray-900 disabled:opacity-40 cursor-pointer transition-colors"
                 >
                   ₹{amt}
                 </button>

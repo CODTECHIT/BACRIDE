@@ -6,7 +6,7 @@ import type { RiderRouteName } from '../navigation/types';
 export const SplashScreen: React.FC<{ onNavigate: (route: RiderRouteName) => void }> = ({ onNavigate }) => (
   <div
     className="flex-1 min-h-0 flex flex-col justify-between relative overflow-hidden"
-    style={{ background: 'linear-gradient(to bottom, #F5A623 0%, #FBBF24 28%, #111318 100%)' }}
+    style={{ background: 'linear-gradient(to bottom, #ffae2e 0%, #ffbd52 30%, #111318 100%)' }}
   >
     <img
       src={`${import.meta.env.BASE_URL}assets/splash-hero-bg.jpg`}
@@ -30,7 +30,7 @@ export const SplashScreen: React.FC<{ onNavigate: (route: RiderRouteName) => voi
 
     <div className="relative z-10 px-6 pb-8 pt-6 flex flex-col items-center space-y-4">
       <div className="flex items-center gap-2">
-        <span className="w-2.5 h-2.5 rounded-full bg-[#FBBF24]" />
+        <span className="w-2.5 h-2.5 rounded-full bg-[#ffae2e]" />
         <span className="w-2 h-2 rounded-full bg-gray-400/70" />
         <span className="w-2 h-2 rounded-full bg-gray-400/70" />
         <span className="w-2 h-2 rounded-full bg-gray-400/70" />
@@ -39,7 +39,7 @@ export const SplashScreen: React.FC<{ onNavigate: (route: RiderRouteName) => voi
       <button
         type="button"
         onClick={() => onNavigate('Login')}
-        className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#FCD34D] via-[#FBBF24] to-[#F59E0B] text-[#111318] font-bold text-sm shadow-[0_8px_28px_rgba(251,191,36,0.4)] flex items-center justify-center gap-2 hover:brightness-105 cursor-pointer"
+        className="w-full py-3.5 rounded-full bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-sm shadow-[0_8px_28px_rgba(255,174,46,0.45)] flex items-center justify-center gap-2 hover:brightness-105 cursor-pointer transition-colors"
       >
         <span>Get Started</span>
         <ArrowRight size={17} weight="bold" />
@@ -50,7 +50,7 @@ export const SplashScreen: React.FC<{ onNavigate: (route: RiderRouteName) => voi
         <button
           type="button"
           onClick={() => onNavigate('Login')}
-          className="text-[#FBBF24] font-semibold hover:underline cursor-pointer"
+          className="text-[#ffae2e] font-semibold hover:underline cursor-pointer"
         >
           Log In
         </button>

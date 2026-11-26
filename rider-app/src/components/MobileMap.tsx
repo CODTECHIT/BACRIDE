@@ -17,12 +17,12 @@ export const RiderMobileMap: React.FC<{
 
         {variant === 'route-live' && (
           <>
-            <path d="M62 152 C92 140 118 88 158 76 C202 64 232 95 278 52" stroke="#F59E0B" strokeWidth="5.5" strokeLinecap="round" fill="none" />
+            <path d="M62 152 C92 140 118 88 158 76 C202 64 232 95 278 52" stroke="#ffae2e" strokeWidth="5.5" strokeLinecap="round" fill="none" />
             <circle cx="62" cy="152" r="7" fill="#16A34A" stroke="#FFFFFF" strokeWidth="2.5" />
             <g transform="translate(158, 76)">
-              <circle r="14" fill="#111318" stroke="#FBBF24" strokeWidth="2.5" />
-              <circle cx="-3.5" cy="3" r="2" fill="#FBBF24" />
-              <circle cx="4" cy="3" r="2" fill="#FBBF24" />
+              <circle r="14" fill="#111318" stroke="#ffae2e" strokeWidth="2.5" />
+              <circle cx="-3.5" cy="3" r="2" fill="#ffae2e" />
+              <circle cx="4" cy="3" r="2" fill="#ffae2e" />
               <path d="M-3 1 L0 -3 H4" stroke="#FFFFFF" strokeWidth="1.6" fill="none" />
             </g>
             <g transform="translate(278, 52)">

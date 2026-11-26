@@ -42,10 +42,10 @@ export const RevenueChart: React.FC<{ period: 'Daily' | 'Weekly' | 'Monthly' }> 
         );
       })}
       <path d={areaPath} fill="url(#revGrad)" />
-      <path d={linePath} fill="none" stroke="#F59E0B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d={linePath} fill="none" stroke="#ffae2e" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
       {pts.map((p) => (
         <g key={p.label}>
-          <circle cx={p.x} cy={p.y} r="3.5" fill="#FBBF24" stroke="#FFFFFF" strokeWidth="1.5" />
+          <circle cx={p.x} cy={p.y} r="3.5" fill="#ffae2e" stroke="#FFFFFF" strokeWidth="1.5" />
           <text x={p.x} y={h - 6} textAnchor="middle" fontSize="9" fill="#6B7280">
             {p.label}
           </text>

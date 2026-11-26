@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --bacride-yellow: #FBBF24;
-  --bacride-amber: #F59E0B;
+  --bacride-yellow: #ffae2e;
+  --bacride-amber: #e89a1f;
   --bacride-dark: #111318;
   --bacride-bg: #F4F5F8;
 }

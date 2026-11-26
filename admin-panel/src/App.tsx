@@ -186,9 +186,9 @@ export function App() {
         <div>
           <div className="px-4 py-4 flex items-center justify-between border-b border-white/10">
             <div className="flex items-center gap-2.5">
-              <BacrideBadgeLogo className="w-9 h-9" />
+              <BacrideBadgeLogo className="w-11 h-11" />
               <div className="leading-tight">
-                <div className="font-display font-extrabold text-white text-base tracking-tight">Bacride</div>
+                <div className="font-display font-black text-white text-lg tracking-tight">Bacride</div>
                 <div className="text-[11px] font-medium text-gray-400">Admin</div>
               </div>
             </div>
@@ -215,7 +215,7 @@ export function App() {
                     setMobileMenuOpen(false);
                   }}
                   className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs transition cursor-pointer ${
-                    active ? 'bg-[#F5A623] text-[#111318] font-bold shadow-xs' : 'text-gray-300 hover:bg-white/5 hover:text-white font-medium'
+                    active ? 'bg-[#ffae2e] text-[#111318] font-bold shadow-xs' : 'text-gray-300 hover:bg-white/5 hover:text-white font-medium'
                   }`}
                 >
                   <span className="flex items-center gap-2.5 truncate">
@@ -256,7 +256,7 @@ export function App() {
             >
               <List size={22} weight="bold" />
             </button>
-            <BacrideBadgeLogo className="w-7 h-7" />
+            <BacrideBadgeLogo className="w-8 h-8" />
           </div>
 
           <div className="relative flex-1 max-w-md min-w-[120px] sm:min-w-[220px]">
@@ -302,7 +302,7 @@ export function App() {
             <button
               type="button"
               onClick={() => setSection('sos')}
-              className="flex items-center gap-1 sm:gap-1.5 bg-[#FBBF24] hover:bg-amber-400 text-[#111318] px-2 sm:px-3 py-1.5 rounded-lg text-xs font-bold shadow-2xs cursor-pointer"
+              className="flex items-center gap-1 sm:gap-1.5 bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] px-2 sm:px-3 py-1.5 rounded-lg text-xs font-bold shadow-2xs cursor-pointer transition-colors"
             >
               <Siren size={14} weight="fill" />
               <span className="hidden sm:inline">SOS Alerts</span>
@@ -344,7 +344,7 @@ export function App() {
                         type="button"
                         onClick={() => setDateRange(r)}
                         className={`px-2.5 sm:px-3 py-1 rounded-md text-xs font-semibold transition cursor-pointer shrink-0 ${
-                          dateRange === r ? 'bg-[#F5A623] text-[#111318] font-bold' : 'text-gray-600 hover:text-gray-900'
+                          dateRange === r ? 'bg-[#ffae2e] text-[#111318] font-bold' : 'text-gray-600 hover:text-gray-900'
                         }`}
                       >
                         {r}
@@ -436,7 +436,7 @@ export function App() {
                             type="button"
                             onClick={() => setRevPeriod(p)}
                             className={`px-2 py-0.5 rounded-md text-[11px] font-semibold cursor-pointer ${
-                              revPeriod === p ? 'bg-[#F5A623] text-[#111318] font-bold' : 'text-gray-600'
+                              revPeriod === p ? 'bg-[#ffae2e] text-[#111318] font-bold' : 'text-gray-600'
                             }`}
                           >
                             {p}
@@ -549,7 +549,7 @@ export function App() {
                             <button
                               type="button"
                               onClick={() => handleKycAction(k.id, 'Approved')}
-                              className="px-2 py-1 rounded bg-[#F5A623] hover:bg-amber-500 text-[#111318] font-bold text-[10px] cursor-pointer"
+                              className="px-2 py-1 rounded bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-[10px] cursor-pointer"
                             >
                               Review
                             </button>
@@ -597,7 +597,7 @@ export function App() {
                         <button
                           type="button"
                           onClick={() => openSosModal(alert.id)}
-                          className="px-2.5 py-1.5 rounded-lg bg-[#F5A623] hover:bg-amber-500 text-[#111318] font-bold text-[11px] shrink-0 cursor-pointer"
+                          className="px-2.5 py-1.5 rounded-lg bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-[11px] shrink-0 cursor-pointer"
                         >
                           Respond
                         </button>
@@ -634,7 +634,7 @@ export function App() {
                       type="button"
                       onClick={() => setDispatchTab(t.id)}
                       className={`px-3.5 py-1.5 rounded-lg text-xs font-bold cursor-pointer ${
-                        dispatchTab === t.id ? 'bg-[#F5A623] text-[#111318]' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        dispatchTab === t.id ? 'bg-[#ffae2e] text-[#111318]' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                     >
                       {t.label}
@@ -664,7 +664,7 @@ export function App() {
                               type="button"
                               onClick={() => setAssignedIds((prev) => (assigned ? prev : [...prev, q.id]))}
                               className={`px-3 py-1 rounded-lg text-xs font-bold inline-flex items-center gap-1 cursor-pointer ${
-                                assigned ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-[#F5A623] text-[#111318] hover:bg-amber-500'
+                                assigned ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-[#ffae2e] text-[#111318] hover:bg-[#f09f20]'
                               }`}
                             >
                               <span>{assigned ? 'Assigned' : 'Assign'}</span>
@@ -713,7 +713,7 @@ export function App() {
                         type="button"
                         onClick={() => setKycTab(t.id)}
                         className={`px-3.5 py-1.5 rounded-lg text-xs font-bold cursor-pointer ${
-                          kycTab === t.id ? 'bg-[#F5A623] text-[#111318]' : 'bg-gray-100 text-gray-600'
+                          kycTab === t.id ? 'bg-[#ffae2e] text-[#111318]' : 'bg-gray-100 text-gray-600'
                         }`}
                       >
                         {t.label}
@@ -830,7 +830,7 @@ export function App() {
                         type="button"
                         onClick={() => setParcelTab(t.id)}
                         className={`px-3 py-1.5 rounded-lg text-xs font-bold cursor-pointer ${
-                          parcelTab === t.id ? 'bg-[#F5A623] text-[#111318]' : 'bg-gray-100 text-gray-600'
+                          parcelTab === t.id ? 'bg-[#ffae2e] text-[#111318]' : 'bg-gray-100 text-gray-600'
                         }`}
                       >
                         {t.label}
@@ -924,7 +924,7 @@ export function App() {
                         type="button"
                         onClick={() => setPayoutTab(t.id)}
                         className={`px-3.5 py-1.5 rounded-lg text-xs font-bold cursor-pointer ${
-                          payoutTab === t.id ? 'bg-[#F5A623] text-[#111318]' : 'bg-gray-100 text-gray-600'
+                          payoutTab === t.id ? 'bg-[#ffae2e] text-[#111318]' : 'bg-gray-100 text-gray-600'
                         }`}
                       >
                         {t.label}
@@ -1024,7 +1024,7 @@ export function App() {
                       type="button"
                       onClick={() => setFareTab(tab)}
                       className={`px-3 py-1.5 rounded-lg text-xs font-bold cursor-pointer ${
-                        fareTab === tab ? 'bg-[#F5A623] text-[#111318]' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        fareTab === tab ? 'bg-[#ffae2e] text-[#111318]' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                     >
                       {tab}
@@ -1044,7 +1044,7 @@ export function App() {
                           type="button"
                           onClick={() => setFareVehicle(vt)}
                           className={`w-full px-3 py-2.5 rounded-xl border flex items-center gap-2.5 text-xs font-bold transition cursor-pointer ${
-                            active ? 'bg-[#FFFBEB] border-[#F5A623] text-gray-900' : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
+                            active ? 'bg-[#FFFBEB] border-[#ffae2e] text-gray-900' : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
                           }`}
                         >
                           <RealisticVehicleIcon type={iconKey} className="w-7 h-4" />
@@ -1176,7 +1176,7 @@ export function App() {
                           setFareSaved(true);
                           setTimeout(() => setFareSaved(false), 2000);
                         }}
-                        className="px-5 py-2 rounded-lg bg-[#F5A623] hover:bg-amber-500 text-[#111318] font-bold text-xs shadow-xs cursor-pointer"
+                        className="px-5 py-2 rounded-lg bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-xs shadow-xs cursor-pointer transition-colors"
                       >
                         Save Changes
                       </button>
@@ -1208,7 +1208,7 @@ export function App() {
             <button value="cancel" autoFocus className="px-4 py-2 rounded-lg border border-gray-200 text-xs font-bold text-gray-700 hover:bg-gray-50 cursor-pointer">
               Close
             </button>
-            <button value="dispatch" className="px-4 py-2 rounded-lg bg-[#F5A623] text-[#111318] text-xs font-bold hover:bg-amber-500 cursor-pointer">
+            <button value="dispatch" className="px-4 py-2 rounded-lg bg-[#ffae2e] text-[#111318] text-xs font-bold hover:bg-[#f09f20] cursor-pointer transition-colors">
               Dispatch Safety Team
             </button>
           </form>

@@ -250,7 +250,7 @@ export const ExtraPage: React.FC<{ pageId: string; onRespondSos: (id: string) =>
               <button
                 type="button"
                 onClick={() => onRespondSos(s.id)}
-                className="w-full py-2 rounded-lg bg-[#F5A623] hover:bg-amber-500 text-[#111318] font-bold text-xs cursor-pointer"
+                className="w-full py-2 rounded-lg bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-xs cursor-pointer transition-colors"
               >
                 Respond &amp; Dispatch Support
               </button>
@@ -279,7 +279,7 @@ export const ExtraPage: React.FC<{ pageId: string; onRespondSos: (id: string) =>
             </h1>
             <p className="text-xs text-gray-500">{meta.sub}</p>
           </div>
-          <button type="button" onClick={() => flash('Created new campaign rule')} className="px-3.5 py-2 rounded-lg bg-[#F5A623] text-[#111318] font-bold text-xs flex items-center gap-1.5 cursor-pointer">
+          <button type="button" onClick={() => flash('Created new campaign rule')} className="px-3.5 py-2 rounded-lg bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-xs flex items-center gap-1.5 cursor-pointer transition-colors">
             <Plus size={14} weight="bold" /> Create New
           </button>
         </div>
@@ -314,7 +314,7 @@ export const ExtraPage: React.FC<{ pageId: string; onRespondSos: (id: string) =>
             </h1>
             <p className="text-xs text-gray-500">Manage static legal and help content displayed across User &amp; Partner apps.</p>
           </div>
-          <button type="button" onClick={() => flash(`${cmsTab} content saved`)} className="px-4 py-2 rounded-lg bg-[#F5A623] text-[#111318] font-bold text-xs cursor-pointer">
+          <button type="button" onClick={() => flash(`${cmsTab} content saved`)} className="px-4 py-2 rounded-lg bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-xs cursor-pointer transition-colors">
             Save Changes
           </button>
         </div>
@@ -381,7 +381,7 @@ export const ExtraPage: React.FC<{ pageId: string; onRespondSos: (id: string) =>
                     <button
                       type="button"
                       onClick={() => setTicketRows((prev) => prev.map((r) => (r.id === t.id ? { ...r, status: 'Resolved' } : r)))}
-                      className="px-2.5 py-1 rounded-md bg-[#F5A623] text-[#111318] font-bold text-[11px] cursor-pointer"
+                      className="px-2.5 py-1 rounded-md bg-[#ffae2e] text-[#111318] font-bold text-[11px] cursor-pointer hover:bg-[#f09f20] transition-colors"
                     >
                       {t.status === 'Resolved' ? 'Resolved' : 'Mark Resolved'}
                     </button>
@@ -403,7 +403,7 @@ export const ExtraPage: React.FC<{ pageId: string; onRespondSos: (id: string) =>
             <h1 className="text-xl font-extrabold text-gray-900">Reports &amp; Exports</h1>
             <p className="text-xs text-gray-500">Export rides, parcel orders, revenue settlements, and cancellation audits.</p>
           </div>
-          <button type="button" onClick={() => flash('Exported full monthly CSV report')} className="px-4 py-2 rounded-lg bg-[#F5A623] text-[#111318] font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer">
+          <button type="button" onClick={() => flash('Exported full monthly CSV report')} className="px-4 py-2 rounded-lg bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer transition-colors">
             <DownloadSimple size={15} weight="bold" /> Export All CSV
           </button>
         </div>
@@ -440,7 +440,7 @@ export const ExtraPage: React.FC<{ pageId: string; onRespondSos: (id: string) =>
             </h1>
             <p className="text-xs text-gray-500">Manage role-based access for Operations, KYC Reviewers, Finance, and Safety Desk.</p>
           </div>
-          <button type="button" onClick={() => flash('Sub-admin invite dialog ready')} className="px-4 py-2 rounded-lg bg-[#F5A623] text-[#111318] font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer">
+          <button type="button" onClick={() => flash('Sub-admin invite dialog ready')} className="px-4 py-2 rounded-lg bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer transition-colors">
             <Plus size={14} weight="bold" /> Add Sub-Admin
           </button>
         </div>
@@ -488,7 +488,7 @@ export const ExtraPage: React.FC<{ pageId: string; onRespondSos: (id: string) =>
           </h1>
           <p className="text-xs text-gray-500">Configure payment gateways, SMS OTP provider, Google Maps, and push notifications.</p>
         </div>
-        <button type="button" onClick={() => flash('Platform settings saved')} className="px-4 py-2 rounded-lg bg-[#F5A623] text-[#111318] font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer">
+        <button type="button" onClick={() => flash('Platform settings saved')} className="px-4 py-2 rounded-lg bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-xs inline-flex items-center gap-1.5 cursor-pointer transition-colors">
           <Check size={14} weight="bold" /> Save Settings
         </button>
       </div>

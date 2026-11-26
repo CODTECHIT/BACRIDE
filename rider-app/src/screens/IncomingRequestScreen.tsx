@@ -16,12 +16,12 @@ export const IncomingRequestScreen: React.FC<{ onNavigate: (route: RiderRouteNam
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#14171D]">
       <div className="bg-gradient-to-b from-[#2E2510] via-[#1B1C22] to-[#14171D] pt-10 pb-6 px-4 flex flex-col items-center text-center shrink-0">
-        <div className="animate-radar w-12 h-12 rounded-full bg-amber-500/20 text-[#FBBF24] flex items-center justify-center mb-2">
+        <div className="animate-radar w-12 h-12 rounded-full bg-amber-500/20 text-[#ffae2e] flex items-center justify-center mb-2">
           <Broadcast size={26} weight="duotone" />
         </div>
         <h2 className="text-base font-bold text-white">Incoming Ride Request</h2>
 
-        <div className="mt-5 w-24 h-24 rounded-full border-4 border-[#FBBF24] bg-black/40 flex items-center justify-center shadow-[0_0_24px_rgba(251,191,36,0.3)]">
+        <div className="mt-5 w-24 h-24 rounded-full border-4 border-[#ffae2e] bg-black/40 flex items-center justify-center shadow-[0_0_24px_rgba(255,174,46,0.35)]">
           <span className="text-3xl font-extrabold text-white">{countdown} s</span>
         </div>
       </div>
@@ -83,7 +83,7 @@ export const IncomingRequestScreen: React.FC<{ onNavigate: (route: RiderRouteNam
           <button
             type="button"
             onClick={() => onNavigate('OnTrip')}
-            className="py-3.5 rounded-full bg-[#FBBF24] hover:bg-amber-400 text-[#111318] font-bold text-sm flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
+            className="py-3.5 rounded-full bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-sm flex items-center justify-center gap-1.5 shadow-sm cursor-pointer transition-colors"
           >
             <span>Accept</span>
             <ArrowRight size={16} weight="bold" />

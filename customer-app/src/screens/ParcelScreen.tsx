@@ -15,15 +15,15 @@ export const ParcelScreen: React.FC<{
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#FCD34D] via-[#FDE68A] to-[#F9FAFB] px-4 pt-3 pb-3 shrink-0">
-        <button type="button" onClick={() => onNavigate('Home')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={18} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#fff8eb] px-4 pt-4 pb-4 shrink-0">
+        <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+          <ArrowLeft size={20} weight="bold" />
         </button>
-        <div className="flex items-center justify-between mt-1">
+        <div className="flex items-center justify-between mt-2">
           <div className="max-w-[64%]">
-            <div className="flex items-center gap-1.5">
-              <Package size={20} weight="duotone" className="text-amber-800" />
-              <h2 className="font-extrabold text-base text-gray-900">Parcel Delivery</h2>
+            <div className="flex items-center gap-2">
+              <Package size={22} weight="duotone" className="text-amber-900" />
+              <h2 className="font-black text-lg text-gray-900 tracking-tight">Parcel Delivery</h2>
             </div>
             <p className="text-xs text-gray-700 mt-1 leading-snug">
               Send &amp; deliver your parcels safely and quickly with Bacride.
@@ -147,7 +147,7 @@ export const ParcelScreen: React.FC<{
                     }`}
                   >
                     {active && (
-                      <span className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-[#FBBF24] text-[#111318] flex items-center justify-center">
+                      <span className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-[#ffae2e] text-[#111318] flex items-center justify-center">
                         <Check size={10} weight="bold" />
                       </span>
                     )}

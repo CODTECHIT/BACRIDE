@@ -6,7 +6,7 @@ import type { CustomerRouteName } from '../navigation/types';
 export const SplashScreen: React.FC<{ onNavigate: (route: CustomerRouteName) => void }> = ({ onNavigate }) => (
   <div
     className="flex-1 min-h-0 flex flex-col justify-between relative overflow-hidden"
-    style={{ background: 'linear-gradient(to bottom, #F5A623 0%, #FBBF24 28%, #111318 100%)' }}
+    style={{ background: 'linear-gradient(to bottom, #ffae2e 0%, #ffbd52 30%, #111318 100%)' }}
   >
     {/* Full-bleed 9:16 Splash Artwork pushed cleanly below the top logo/tagline sky */}
     <img
@@ -33,7 +33,7 @@ export const SplashScreen: React.FC<{ onNavigate: (route: CustomerRouteName) => 
     {/* Bottom Pagination Dots + Get Started CTA + Log In */}
     <div className="relative z-10 px-6 pb-8 pt-6 flex flex-col items-center space-y-4">
       <div className="flex items-center gap-2">
-        <span className="w-2.5 h-2.5 rounded-full bg-[#FBBF24]" />
+        <span className="w-2.5 h-2.5 rounded-full bg-[#ffae2e]" />
         <span className="w-2 h-2 rounded-full bg-gray-400/70" />
         <span className="w-2 h-2 rounded-full bg-gray-400/70" />
         <span className="w-2 h-2 rounded-full bg-gray-400/70" />
@@ -53,7 +53,7 @@ export const SplashScreen: React.FC<{ onNavigate: (route: CustomerRouteName) => 
         <button
           type="button"
           onClick={() => onNavigate('Login')}
-          className="text-[#FBBF24] font-semibold hover:underline cursor-pointer"
+          className="text-[#ffae2e] font-semibold hover:underline cursor-pointer"
         >
           Log In
         </button>

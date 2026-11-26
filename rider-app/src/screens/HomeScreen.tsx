@@ -14,25 +14,25 @@ export const HomeScreen: React.FC<{
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
-      <div className="bg-gradient-to-b from-[#FCD34D] via-[#FDE68A] to-[#FEF9C3] px-4 pt-3 pb-3 shrink-0">
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#fff9f0] px-4 pt-4 pb-4 shrink-0 shadow-xs">
         <div className="flex items-center justify-between">
-          <button type="button" onClick={onOpenMenu} className="p-1 text-gray-800 cursor-pointer" aria-label="Menu">
-            <List size={20} weight="bold" />
+          <button type="button" onClick={onOpenMenu} className="p-2 rounded-xl hover:bg-black/10 text-gray-900 cursor-pointer transition-colors" aria-label="Menu">
+            <List size={24} weight="bold" />
           </button>
-          <div className="flex items-center gap-1.5">
-            <BacrideSoloScooterMark className="w-7 h-5 text-[#111318]" />
-            <span className="font-display font-extrabold text-base text-[#111318]">Bacride</span>
+          <div className="flex items-center gap-2.5">
+            <BacrideSoloScooterMark className="w-10 h-7 text-[#111318]" />
+            <span className="font-display font-black text-xl tracking-tight text-[#111318]">Bacride</span>
           </div>
-          <button type="button" onClick={() => onNavigate('Support')} className="p-1 text-gray-800 cursor-pointer" aria-label="Support">
-            <Bell size={19} weight="bold" />
+          <button type="button" onClick={() => onNavigate('Support')} className="p-2 rounded-xl hover:bg-black/10 text-gray-900 cursor-pointer transition-colors" aria-label="Support">
+            <Bell size={22} weight="bold" />
           </button>
         </div>
-        <div className="mt-2">
-          <h2 className="font-extrabold text-lg text-gray-900 flex items-center gap-1.5">
+        <div className="mt-3 bg-white/85 backdrop-blur-xs rounded-2xl px-4 py-2.5 shadow-xs border border-white/60">
+          <h2 className="font-bold text-lg text-gray-900 flex items-center gap-1.5 leading-tight">
             <span>Hi, Arif!</span>
-            <HandWaving size={18} weight="duotone" className="text-amber-700" />
+            <HandWaving size={19} weight="duotone" className="text-amber-700" />
           </h2>
-          <p className="text-xs text-gray-700">Go online to receive ride &amp; delivery requests.</p>
+          <p className="text-xs text-gray-600 mt-0.5">Go online to receive ride &amp; delivery requests.</p>
         </div>
       </div>
 
@@ -68,7 +68,7 @@ export const HomeScreen: React.FC<{
           <button
             type="button"
             onClick={() => onNavigate('Earnings')}
-            className="px-4 py-2 rounded-full bg-[#FBBF24] text-[#111318] font-bold text-xs hover:bg-amber-400 shrink-0 cursor-pointer"
+            className="px-4 py-2 rounded-full bg-[#ffae2e] text-[#111318] font-bold text-xs hover:bg-[#f09f20] shrink-0 cursor-pointer transition-colors"
           >
             Withdraw
           </button>

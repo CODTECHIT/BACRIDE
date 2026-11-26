@@ -13,17 +13,17 @@ export const AccountScreen: React.FC<{
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB] relative">
       {/* Curved golden header wrapping behind the top of the profile card */}
-      <div className="bg-gradient-to-b from-[#FBBF24] via-[#FCD34D] to-[#FDE68A] px-4 pt-3 pb-10 rounded-b-3xl shrink-0">
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffd27d] px-4 pt-4 pb-12 rounded-b-3xl shrink-0">
         <div className="flex items-center justify-between">
-          <button type="button" onClick={() => onNavigate('Home')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-            <ArrowLeft size={18} weight="bold" />
+          <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+            <ArrowLeft size={20} weight="bold" />
           </button>
           <div className="flex items-center gap-1.5">
-            <User size={16} weight="duotone" className="text-gray-900" />
-            <span className="font-bold text-base text-gray-900">My Account</span>
+            <User size={19} weight="duotone" className="text-gray-900" />
+            <span className="font-bold text-lg text-gray-900">My Account</span>
           </div>
-          <button type="button" onClick={() => setProfileModalOpen(true)} className="p-1 text-gray-900 cursor-pointer" aria-label="Settings">
-            <Gear size={18} weight="duotone" />
+          <button type="button" onClick={() => setProfileModalOpen(true)} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Settings">
+            <Gear size={20} weight="duotone" />
           </button>
         </div>
       </div>
@@ -35,7 +35,7 @@ export const AccountScreen: React.FC<{
           className="w-full bg-white rounded-xl border border-gray-200 p-3 flex items-center justify-between text-left shadow-xs hover:bg-gray-50 cursor-pointer"
         >
           <div className="flex items-center gap-3">
-            <img src={`${import.meta.env.BASE_URL}assets/avatar-arif.png`} alt="Arif Hasan" className="w-12 h-12 rounded-full object-cover border-2 border-amber-400" />
+            <img src={`${import.meta.env.BASE_URL}assets/avatar-arif.png`} alt="Arif Hasan" className="w-12 h-12 rounded-full object-cover border-2 border-[#ffae2e]" />
             <div>
               <div className="text-sm font-extrabold text-gray-900">Arif Hasan</div>
               <div className="text-xs text-gray-500">+91 98480 12345</div>
@@ -48,10 +48,10 @@ export const AccountScreen: React.FC<{
         <div className="relative overflow-hidden bg-[#161920] text-white rounded-2xl p-3.5 flex items-center justify-between gap-2 shadow-md">
           <div
             className="absolute -right-6 -top-6 w-36 h-36 rounded-full pointer-events-none"
-            style={{ background: 'radial-gradient(circle, rgba(251,191,36,0.22) 0%, rgba(251,191,36,0) 70%)' }}
+            style={{ background: 'radial-gradient(circle, rgba(255,174,46,0.3) 0%, rgba(255,174,46,0) 70%)' }}
           />
           <div className="flex items-center gap-3 min-w-0 relative z-10">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-[#ffae2e]/20 text-[#ffae2e] flex items-center justify-center shrink-0">
               <Wallet size={21} weight="duotone" />
             </div>
             <div className="min-w-0">
@@ -64,7 +64,7 @@ export const AccountScreen: React.FC<{
           <button
             type="button"
             onClick={() => setAddMoneyOpen(true)}
-            className="relative z-10 px-3.5 py-2 rounded-full bg-[#FBBF24] text-[#111318] font-bold text-xs whitespace-nowrap shrink-0 hover:bg-amber-400 cursor-pointer"
+            className="relative z-10 px-3.5 py-2 rounded-full bg-[#ffae2e] text-[#111318] font-bold text-xs whitespace-nowrap shrink-0 hover:bg-[#f09f20] cursor-pointer"
           >
             Add Money +
           </button>
@@ -137,7 +137,7 @@ export const AccountScreen: React.FC<{
                     onAddMoney(amt);
                     setAddMoneyOpen(false);
                   }}
-                  className="py-3 rounded-xl border border-amber-300 bg-amber-50 hover:bg-[#FBBF24] text-sm font-extrabold text-gray-900 cursor-pointer"
+                  className="py-3 rounded-xl border border-[#ffae2e]/50 bg-amber-50 hover:bg-[#ffae2e] text-sm font-extrabold text-gray-900 cursor-pointer transition-colors"
                 >
                   + ₹{amt}
                 </button>

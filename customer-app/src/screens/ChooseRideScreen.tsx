@@ -27,11 +27,11 @@ export const ChooseRideScreen: React.FC<{
 
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB] relative">
-      <div className="bg-gradient-to-b from-[#FCD34D] to-[#FDE68A] px-4 py-3 flex items-center gap-3 shrink-0">
-        <button type="button" onClick={() => onNavigate('Home')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-          <ArrowLeft size={18} weight="bold" />
+      <div className="bg-gradient-to-b from-[#ffae2e] to-[#ffbe4d] px-4 py-4 flex items-center gap-3 shrink-0">
+        <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+          <ArrowLeft size={20} weight="bold" />
         </button>
-        <h2 className="font-bold text-base text-gray-900 flex-1 text-center pr-7">Choose a Ride</h2>
+        <h2 className="font-bold text-lg text-gray-900 flex-1 text-center pr-8">Choose a Ride</h2>
       </div>
 
       <div className="flex-1 min-h-0 p-4 space-y-3 overflow-y-auto thin-scroll">
@@ -71,7 +71,7 @@ export const ChooseRideScreen: React.FC<{
                 type="button"
                 onClick={() => setSelectedRide(opt.id)}
                 className={`w-full px-3.5 py-2.5 rounded-xl border flex items-center justify-between text-left transition cursor-pointer ${
-                  active ? 'bg-[#FFFBEB] border-[#FBBF24] shadow-2xs' : 'bg-white border-gray-200 hover:bg-gray-50'
+                  active ? 'bg-[#fff8eb] border-[#ffae2e] shadow-2xs' : 'bg-white border-gray-200 hover:bg-gray-50'
                 }`}
               >
                 <div className="flex items-center gap-3">
@@ -91,7 +91,7 @@ export const ChooseRideScreen: React.FC<{
                   <span className="text-sm font-extrabold text-gray-900 whitespace-nowrap">₹ {opt.fare}</span>
                   <span
                     className={`w-5 h-5 rounded-full flex items-center justify-center border ${
-                      active ? 'bg-[#FBBF24] border-[#F59E0B] text-[#111318]' : 'border-gray-300'
+                      active ? 'bg-[#ffae2e] border-[#e89a1f] text-[#111318]' : 'border-gray-300'
                     }`}
                   >
                     {active && <Check size={11} weight="bold" />}
@@ -129,7 +129,7 @@ export const ChooseRideScreen: React.FC<{
                 setStopDraft('');
                 setAddingStop(false);
               }}
-              className="px-3 py-1 rounded-lg bg-[#FBBF24] text-[#111318] text-xs font-bold cursor-pointer"
+              className="px-3 py-1 rounded-lg bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] text-xs font-bold cursor-pointer transition-colors"
             >
               Add
             </button>

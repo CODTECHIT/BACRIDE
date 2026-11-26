@@ -44,14 +44,14 @@ export const WalletScreen: React.FC<{
   return (
     <div className="flex-1 min-h-0 flex flex-col bg-[#F9FAFB]">
       {/* Header matching Bacride Customer App */}
-      <div className="bg-gradient-to-b from-[#FBBF24] via-[#FCD34D] to-[#FDE68A] px-4 pt-3 pb-10 rounded-b-3xl shrink-0">
+      <div className="bg-gradient-to-b from-[#ffae2e] via-[#ffbe4d] to-[#ffd27d] px-4 pt-4 pb-12 rounded-b-3xl shrink-0">
         <div className="flex items-center justify-between">
-          <button type="button" onClick={() => onNavigate('Home')} className="p-1 text-gray-900 cursor-pointer" aria-label="Back">
-            <ArrowLeft size={18} weight="bold" />
+          <button type="button" onClick={() => onNavigate('Home')} className="p-1.5 rounded-lg hover:bg-black/5 text-gray-900 cursor-pointer" aria-label="Back">
+            <ArrowLeft size={20} weight="bold" />
           </button>
           <div className="flex items-center gap-1.5">
-            <Wallet size={17} weight="duotone" className="text-gray-900" />
-            <span className="font-bold text-base text-gray-900">Bacride Wallet</span>
+            <Wallet size={19} weight="duotone" className="text-gray-900" />
+            <span className="font-bold text-lg text-gray-900">Bacride Wallet</span>
           </div>
           <span className="w-6" />
         </div>
@@ -62,7 +62,7 @@ export const WalletScreen: React.FC<{
         <div className="relative overflow-hidden bg-[#161920] text-white rounded-2xl p-4 shadow-md space-y-3">
           <div
             className="absolute -right-6 -top-6 w-40 h-40 rounded-full pointer-events-none"
-            style={{ background: 'radial-gradient(circle, rgba(251,191,36,0.24) 0%, rgba(251,191,36,0) 70%)' }}
+            style={{ background: 'radial-gradient(circle, rgba(255,174,46,0.3) 0%, rgba(255,174,46,0) 70%)' }}
           />
           <div className="flex items-center justify-between relative z-10">
             <div>
@@ -84,7 +84,7 @@ export const WalletScreen: React.FC<{
                 onClick={() => setSelectedTopUp(amt)}
                 className={`py-1.5 rounded-xl text-xs font-bold border transition cursor-pointer ${
                   selectedTopUp === amt && !customAmt
-                    ? 'bg-[#FBBF24] border-[#FBBF24] text-[#111318]'
+                    ? 'bg-[#ffae2e] border-[#ffae2e] text-[#111318]'
                     : 'bg-white/10 border-white/15 text-white hover:bg-white/15'
                 }`}
               >
@@ -108,7 +108,7 @@ export const WalletScreen: React.FC<{
             <button
               type="button"
               onClick={() => handleTopUp(customAmt ? Number(customAmt) : selectedTopUp)}
-              className="px-4 py-2 rounded-xl bg-[#FBBF24] hover:bg-amber-400 text-[#111318] font-bold text-xs flex items-center gap-1 shrink-0 cursor-pointer"
+              className="px-4 py-2 rounded-xl bg-[#ffae2e] hover:bg-[#f09f20] text-[#111318] font-bold text-xs flex items-center gap-1 shrink-0 cursor-pointer transition-colors"
             >
               <Plus size={13} weight="bold" />
               <span>Add Money</span>
@@ -158,7 +158,7 @@ export const WalletScreen: React.FC<{
         {/* Referral & Promo Cashback */}
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <span className="w-8 h-8 rounded-full bg-[#FBBF24] text-[#111318] flex items-center justify-center shrink-0">
+            <span className="w-8 h-8 rounded-full bg-[#ffae2e] text-[#111318] flex items-center justify-center shrink-0">
               <Gift size={16} weight="duotone" />
             </span>
             <div>

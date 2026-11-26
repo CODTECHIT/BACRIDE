@@ -37,11 +37,11 @@ export const RiderDrawer: React.FC<{
     <div className="absolute inset-0 z-40 bg-black/50 backdrop-blur-[1px] flex">
       <div className="w-[82%] max-w-[320px] bg-white h-full flex flex-col justify-between shadow-2xl overflow-hidden">
         <div>
-          <div className="bg-gradient-to-br from-[#FBBF24] via-[#FCD34D] to-[#FDE68A] px-4 pt-4 pb-4">
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center gap-2">
-                <BacrideSoloScooterMark className="w-7 h-5 text-[#111318]" />
-                <span className="font-display font-extrabold text-base text-[#111318]">Bacride Partner</span>
+          <div className="bg-gradient-to-br from-[#ffae2e] via-[#ffbe4d] to-[#ffd27d] px-4 pt-5 pb-5">
+            <div className="flex items-center justify-between mb-3.5">
+              <div className="flex items-center gap-2.5">
+                <BacrideSoloScooterMark className="w-10 h-7 text-[#111318]" />
+                <span className="font-display font-black text-xl tracking-tight text-[#111318]">Bacride Partner</span>
               </div>
               <button
                 type="button"
@@ -58,7 +58,7 @@ export const RiderDrawer: React.FC<{
                 <img
                   src={`${import.meta.env.BASE_URL}assets/avatar-arif.png`}
                   alt="Arif Partner"
-                  className="w-10 h-10 rounded-full object-cover border-2 border-[#FBBF24] shrink-0"
+                  className="w-10 h-10 rounded-full object-cover border-2 border-[#ffae2e] shrink-0"
                 />
                 <div className="min-w-0">
                   <div className="text-xs font-extrabold truncate">Arif (Partner)</div>
@@ -75,7 +75,7 @@ export const RiderDrawer: React.FC<{
                   onClose();
                   onNavigate('Earnings');
                 }}
-                className="px-2.5 py-1 rounded-full bg-[#FBBF24] text-[#111318] text-[10px] font-extrabold whitespace-nowrap shrink-0 cursor-pointer"
+                className="px-2.5 py-1 rounded-full bg-[#ffae2e] text-[#111318] text-[10px] font-extrabold whitespace-nowrap shrink-0 hover:brightness-105 cursor-pointer"
               >
                 ₹{walletBalance.toLocaleString('en-IN')}
               </button>

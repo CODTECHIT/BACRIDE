@@ -1,8 +1,8 @@
 export const AdminTheme = {
   colors: {
     sidebarBg: '#111318',
-    primary: '#F5A623',
-    primaryBright: '#FBBF24',
+    primary: '#ffae2e',
+    primaryBright: '#ffae2e',
     background: '#F4F5F8',
     surface: '#FFFFFF',
     border: '#E5E7EB',

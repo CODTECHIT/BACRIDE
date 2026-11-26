@@ -21,7 +21,7 @@ export const RiderBottomNav: React.FC<{
           type="button"
           onClick={() => onNavigate(tab.target)}
           className={`flex flex-col items-center gap-0.5 px-3.5 py-1 rounded-xl text-[11px] font-bold cursor-pointer ${
-            isActive ? 'bg-[#FBBF24]/25 text-amber-700' : 'text-gray-400 hover:text-gray-600'
+            isActive ? 'bg-[#ffae2e]/25 text-[#d97c00]' : 'text-gray-400 hover:text-gray-600'
           }`}
         >
           <Icon size={19} weight={isActive ? 'fill' : 'regular'} />

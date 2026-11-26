@@ -33,16 +33,16 @@ export const CharminarSkyline: React.FC<{ className?: string }> = ({ className =
     <rect x="20" y="42" width="14" height="28" fill="#F59E0B" fillOpacity="0.35" />
     <rect x="38" y="34" width="16" height="36" fill="#F59E0B" fillOpacity="0.45" />
     <path d="M56 70V46C56 40 66 40 66 46V70H56Z" fill="#F59E0B" fillOpacity="0.5" />
-    <rect x="78" y="24" width="8" height="46" rx="1" fill="#FBBF24" />
-    <circle cx="82" cy="20" r="4.5" fill="#FBBF24" />
-    <rect x="134" y="24" width="8" height="46" rx="1" fill="#FBBF24" />
-    <circle cx="138" cy="20" r="4.5" fill="#FBBF24" />
+    <rect x="78" y="24" width="8" height="46" rx="1" fill="#ffae2e" />
+    <circle cx="82" cy="20" r="4.5" fill="#ffae2e" />
+    <rect x="134" y="24" width="8" height="46" rx="1" fill="#ffae2e" />
+    <circle cx="138" cy="20" r="4.5" fill="#ffae2e" />
     <rect x="86" y="36" width="48" height="34" fill="#F59E0B" fillOpacity="0.85" />
     <path d="M98 70V50C98 44 122 44 122 50V70H98Z" fill="#111318" />
-    <rect x="92" y="20" width="6" height="16" fill="#FBBF24" />
-    <rect x="122" y="20" width="6" height="16" fill="#FBBF24" />
-    <circle cx="95" cy="17" r="3" fill="#FBBF24" />
-    <circle cx="125" cy="17" r="3" fill="#FBBF24" />
+    <rect x="92" y="20" width="6" height="16" fill="#ffae2e" />
+    <rect x="122" y="20" width="6" height="16" fill="#ffae2e" />
+    <circle cx="95" cy="17" r="3" fill="#ffae2e" />
+    <circle cx="125" cy="17" r="3" fill="#ffae2e" />
     <path d="M150 70V46C150 40 162 40 162 46V70H150Z" fill="#F59E0B" fillOpacity="0.5" />
     <rect x="166" y="36" width="16" height="34" fill="#F59E0B" fillOpacity="0.45" />
     <rect x="186" y="45" width="14" height="25" fill="#F59E0B" fillOpacity="0.35" />
