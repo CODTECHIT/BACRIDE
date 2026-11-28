@@ -14,6 +14,17 @@
 .thin-scroll::-webkit-scrollbar-track { background: transparent; }
 .thin-scroll::-webkit-scrollbar-thumb { background: rgb(156 163 175 / 0.45); border-radius: 9999px; }
 
+/* Hide scrollbar completely */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  height: 0px;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Refined Glassmorphism Button Touch */
 .btn-glass-primary {
   background: linear-gradient(135deg, #ffc56b 0%, #ffae2e 50%, #f09a1a 100%);
