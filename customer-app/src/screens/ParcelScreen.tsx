@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight, CaretRight, Check, MapPin, Package, Scales, User } from '@phosphor-icons/react';
-import { ParcelBoxesIllustration, RealisticVehicleIcon } from '../components/BacrideIcons';
+import { getAsset } from '../utils/assets';
 import type { CustomerRouteName } from '../navigation/types';
 
 export const ParcelScreen: React.FC<{
@@ -29,7 +29,9 @@ export const ParcelScreen: React.FC<{
               Send &amp; deliver your parcels safely and quickly with Bacride.
             </p>
           </div>
-          <ParcelBoxesIllustration className="w-32 h-24 shrink-0 -mr-1 drop-shadow-xs" />
+          <div className="w-24 h-20 shrink-0 -mr-1 flex items-center justify-center">
+            <img src={getAsset('assets/parcel.png')} alt="Parcel" className="max-h-20 max-w-full object-contain drop-shadow-md" />
+          </div>
         </div>
       </div>
 
@@ -150,8 +152,12 @@ export const ParcelScreen: React.FC<{
                         <Check size={10} weight="bold" />
                       </span>
                     )}
-                    <div className="flex justify-center mb-1">
-                      <RealisticVehicleIcon type={v.id} className="w-9 h-5" />
+                    <div className="h-10 flex items-center justify-center mb-1">
+                      <img
+                        src={getAsset(v.id === 'Bike' ? 'assets/bike.png' : v.id === 'Auto' ? 'assets/auto.png' : 'assets/car.png')}
+                        alt={v.id}
+                        className="max-h-10 max-w-full object-contain"
+                      />
                     </div>
                     <div className="text-xs font-bold text-gray-900">{v.id}</div>
                     <div className="text-[10px] text-gray-500">{v.cap}</div>

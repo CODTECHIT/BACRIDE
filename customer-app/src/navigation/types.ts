@@ -4,6 +4,7 @@ export type CustomerRouteName =
   | 'Home'
   | 'ChooseRide'
   | 'Parcel'
+  | 'AutoPool'
   | 'Tracking'
   | 'Wallet'
   | 'Account'

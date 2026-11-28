@@ -4,15 +4,18 @@ export interface RideVehicleOption {
   eta: string;
   range: string;
   fare: number;
-  icon: 'Bike' | 'Auto' | 'Mini' | 'Sedan' | 'SUV';
+  image: string;
+  badge?: string;
 }
 
 export const RIDE_OPTIONS: RideVehicleOption[] = [
-  { id: 'bike', name: 'Bike', eta: '~ 7 min', range: '2-4 min', fare: 80, icon: 'Bike' },
-  { id: 'auto', name: 'Auto', eta: '~ 10 min', range: '3-5 min', fare: 130, icon: 'Auto' },
-  { id: 'mini', name: 'Mini (Hatch)', eta: '~ 12 min', range: '4-6 min', fare: 220, icon: 'Mini' },
-  { id: 'sedan', name: 'Sedan', eta: '~ 14 min', range: '5-7 min', fare: 320, icon: 'Sedan' },
-  { id: 'suv', name: 'SUV', eta: '~ 16 min', range: '6-8 min', fare: 420, icon: 'SUV' },
+  { id: 'bike', name: 'Bike', eta: '~ 2 min away', range: 'Fastest', fare: 45, image: 'assets/bike.png' },
+  { id: 'scooty', name: 'Scooty', eta: '~ 2 min away', range: 'Comfortable', fare: 40, image: 'assets/scooty.png' },
+  { id: 'bike_lite', name: 'Bike Lite', eta: '~ 3 min away', range: 'Saver', fare: 35, image: 'assets/bike_on_discount.png', badge: '15% OFF' },
+  { id: 'auto', name: 'Auto', eta: '~ 4 min away', range: 'Doorstep', fare: 75, image: 'assets/auto.png' },
+  { id: 'shared_auto', name: 'Shared Auto', eta: '~ 4 min away', range: 'Pool', fare: 35, image: 'assets/auto_for_3people.png', badge: 'POOL' },
+  { id: 'cab_non_ac', name: 'Cab Non AC', eta: '~ 5 min away', range: 'Economical', fare: 120, image: 'assets/car.png' },
+  { id: 'cab_premium', name: 'Cab Premium AC', eta: '~ 6 min away', range: 'Top Rated', fare: 160, image: 'assets/ac_car.png', badge: 'AC' },
 ];
 
 export const RIDE_HISTORY = [

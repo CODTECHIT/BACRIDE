@@ -10,6 +10,8 @@ export const BacrideDualScooterMark: React.FC<{ className?: string }> = ({ class
   />
 );
 
+export const BacrideBadgeLogo = BacrideDualScooterMark;
+
 /** Exact official Bacride full logo lockup (scooter + Bacride wordmark + arrow) */
 export const BacrideLogoLockup: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
   const sizeClass = size === 'lg' ? 'w-36 h-36' : size === 'sm' ? 'w-16 h-16' : 'w-28 h-28';

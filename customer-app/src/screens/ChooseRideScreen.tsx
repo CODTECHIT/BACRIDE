@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight, ArrowsDownUp, CalendarBlank, CaretRight, Check, MapPin, Plus, Tag, X } from '@phosphor-icons/react';
-import { RealisticVehicleIcon } from '../components/BacrideIcons';
+import { getAsset } from '../utils/assets';
 import { RIDE_OPTIONS } from '../data/mockData';
 import type { CustomerRouteName } from '../navigation/types';
 
@@ -71,16 +71,26 @@ export const ChooseRideScreen: React.FC<{
                 key={opt.id}
                 type="button"
                 onClick={() => setSelectedRide(opt.id)}
-                className={`w-full px-3.5 py-2.5 rounded-xl border flex items-center justify-between text-left transition cursor-pointer ${active ? 'bg-[#fff8eb] border-[#ffae2e] shadow-2xs' : 'bg-white border-gray-200 hover:bg-gray-50'
-                  }`}
+                className={`w-full px-3.5 py-2.5 rounded-2xl border flex items-center justify-between text-left transition cursor-pointer ${
+                  active ? 'bg-[#FFF9EB] border-[#FFAE2E] shadow-2xs' : 'bg-white border-gray-200 hover:bg-gray-50'
+                }`}
               >
                 <div className="flex items-center gap-3">
-                  <RealisticVehicleIcon type={opt.icon} className="w-10 h-6" />
+                  <div className="w-12 h-10 flex items-center justify-center shrink-0">
+                    <img src={getAsset(opt.image)} alt={opt.name} className="max-h-10 max-w-full object-contain" />
+                  </div>
                   <div>
-                    <div className="text-sm font-bold text-gray-900">{opt.name}</div>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-sm font-black text-gray-900">{opt.name}</span>
+                      {opt.badge && (
+                        <span className="text-[9px] font-black bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded-md">
+                          {opt.badge}
+                        </span>
+                      )}
+                    </div>
                     <div className="flex items-center gap-2 text-[11px] text-gray-500">
                       <span>{opt.eta}</span>
-                      <span className="text-emerald-600 font-medium flex items-center gap-1">
+                      <span className="text-emerald-600 font-bold flex items-center gap-1">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                         {opt.range}
                       </span>
@@ -88,10 +98,11 @@ export const ChooseRideScreen: React.FC<{
                   </div>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <span className="text-sm font-extrabold text-gray-900 whitespace-nowrap">₹ {opt.fare}</span>
+                  <span className="text-sm font-black text-gray-900 whitespace-nowrap">₹ {opt.fare}</span>
                   <span
-                    className={`w-5 h-5 rounded-full flex items-center justify-center border ${active ? 'bg-[#ffae2e] border-[#e89a1f] text-[#111318]' : 'border-gray-300'
-                      }`}
+                    className={`w-5 h-5 rounded-full flex items-center justify-center border ${
+                      active ? 'bg-[#FFAE2E] border-[#E89A1F] text-[#111318]' : 'border-gray-300'
+                    }`}
                   >
                     {active && <Check size={11} weight="bold" />}
                   </span>

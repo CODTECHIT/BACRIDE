@@ -4,6 +4,7 @@ import { CustomerDrawer } from './components/CustomerDrawer';
 import { MobileAppShell } from './components/MobileAppShell';
 import type { CustomerRouteName } from './navigation/types';
 import { AccountScreen } from './screens/AccountScreen';
+import { AutoPoolScreen } from './screens/AutoPoolScreen';
 import { ChooseRideScreen } from './screens/ChooseRideScreen';
 import { HomeScreen } from './screens/HomeScreen';
 import { LoginScreen } from './screens/LoginScreen';
@@ -26,18 +27,24 @@ export function App() {
   const [selectedRide, setSelectedRide] = useState('bike');
   const [selectedCategory, setSelectedCategory] = useState<'Bike' | 'Auto' | 'Cab'>('Bike');
   const [parcelVehicle, setParcelVehicle] = useState<'Bike' | 'Auto' | 'Cab'>('Bike');
-  const [pickup, setPickup] = useState('My Current Location (Madhapur, Hyd)');
+  const [pickup, setPickup] = useState('Plot No 89 Rd Number 1, near Vinayaka mandapamu, Chaitany...');
   const [drop, setDrop] = useState('Gachibowli Circle, Hyderabad');
   const [walletBalance, setWalletBalance] = useState(1250);
   const [transactions, setTransactions] = useState<WalletTransaction[]>(INITIAL_TRANSACTIONS);
 
   const getActiveTab = (currentRoute: CustomerRouteName): CustomerNavTab => {
     if (currentRoute === 'Parcel') return 'Parcel';
-    if (currentRoute === 'ChooseRide' || currentRoute === 'Tracking') return 'Ride';
-    if (currentRoute === 'Account' || currentRoute === 'History' || currentRoute === 'SavedPlaces' || currentRoute === 'Support' || currentRoute === 'Wallet') {
-      return 'Account';
+    if (currentRoute === 'AutoPool') return 'AutoPool';
+    if (
+      currentRoute === 'Account' ||
+      currentRoute === 'History' ||
+      currentRoute === 'SavedPlaces' ||
+      currentRoute === 'Support' ||
+      currentRoute === 'Wallet'
+    ) {
+      return 'Profile';
     }
-    return 'Home';
+    return 'Ride';
   };
 
   const activeNavTab = getActiveTab(route);
@@ -106,6 +113,7 @@ export function App() {
           setParcelVehicle={setParcelVehicle}
         />
       )}
+      {route === 'AutoPool' && <AutoPoolScreen onNavigate={navigate} />}
       {route === 'Tracking' && <TrackingScreen onNavigate={navigate} />}
       {route === 'Wallet' && (
         <WalletScreen
